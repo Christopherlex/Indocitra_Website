@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials – Indo Citra Jaya Sentosa</title>
+  <meta name="description" content="Client success stories and testimonials for PT Indo Citra Jaya Sentosa." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .tcard {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.25rem 2rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: var(--transition);
+    }
+    .tcard:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 20px 50px rgba(10,69,139,0.13); }
+    .tcard-quote {
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--orange);
+      font-family: Georgia, serif;
+      margin-bottom: 0.5rem;
+      opacity: 0.5;
+    }
+    .tcard-text {
+      font-size: 1rem;
+      color: var(--text-dark);
+      line-height: 1.8;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .tcard-divider {
+      width: 40px; height: 3px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin-bottom: 1.25rem;
+    }
+    .tcard-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .tcard-avatar {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 700;
+      font-family: 'Barlow Condensed', sans-serif;
+      flex-shrink: 0;
+    }
+    .tcard-author-info strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+    .tcard-author-info span {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .tcard-company-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(10,69,139,0.07);
+      color: var(--blue);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .stars { color: var(--orange); font-size: 0.9rem; margin-bottom: 0.75rem; letter-spacing: 2px; }
+    .coming-soon-note {
+      text-align: center;
+      background: var(--off-white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      border: 2px dashed var(--border);
+      margin-top: 2.5rem;
+    }
+    .coming-soon-note i { font-size: 2.5rem; color: var(--border); margin-bottom: 1rem; display: block; }
+    .coming-soon-note p { font-size: 0.95rem; color: var(--text-light); max-width: 420px; margin: 0 auto; }
+    @media (max-width: 680px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Page transition overlay -->
+<div id="page-transition">
+  <div class="pt-veil"></div>
+  <div class="pt-bar"></div>
+</div>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header>
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa Logo" />
+        <div class="nav-logo-text">
+          <span class="brand">Indo Citra Jaya Sentosa</span>
+          <span class="tagline">Built on Trust, Driven by Reliability</span>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonial.html">Testimonial</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════ PAGE HERO ════════════════════════════ -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">What Our Clients Say</span>
+    <h1>Client Testimonials</h1>
+    <p>Real feedback from the companies and professionals we've had the privilege of working with.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ TESTIMONIALS ═════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Success Stories</span>
+      <h2 class="section-title">Trusted by Leading Companies</h2>
+      <div class="divider center"></div>
+      <p class="section-sub" style="margin:0 auto;">
+        We place our clients' needs at the center of everything we do — and these results speak for themselves.
+      </p>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <!-- Testimonial 1: Autorun Inc -->
+      <div class="tcard reveal">
+        <div class="tcard-company-tag">
+          <i class="fa-solid fa-building"></i> Autorun Inc — Korea
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="tcard-quote">"</div>
+        <p class="tcard-text">
+          Overall we are satisfied with the service and project execution provided by Indo Citra Jaya Sentosa.
+          The safety installation project was handled professionally, meeting our SIL-4 compliance requirements
+          with strong technical precision and on-time delivery.
+        </p>
+        <div class="tcard-divider"></div>
+        <div class="tcard-author">
+          <div class="tcard-avatar">YJ</div>
+          <div class="tcard-author-info">
+            <strong>Young-Jang</strong>
+            <span>Sr. Manager, Operation Management Team — Autorun Inc</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2: Indolakto -->
+      <div class="tcard reveal" style="transition-delay:0.12s;">
+        <div class="tcard-company-tag">
+          <i class="fa-solid fa-building"></i> PT. Indolakto Pandaan
+        </div>
+        <div class="stars">★★★★★</div>
+        <div class="tcard-quote">"</div>
+        <p class="tcard-text">
+          Indocitra can fulfill our needs for this custom machine. The machine and the service
+          was beyond our expectation in a good way. The automated unscrambler system significantly
+          increased our bottle output per shift while reducing manpower costs. This was what we needed.
+        </p>
+        <div class="tcard-divider"></div>
+        <div class="tcard-author">
+          <div class="tcard-avatar">AG</div>
+          <div class="tcard-author-info">
+            <strong>Mr. Agus</strong>
+            <span>Warehouse Manager — PT. Indolakto Pandaan</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Coming soon note -->
+    <div class="coming-soon-note reveal">
+      <i class="fa-regular fa-comment-dots"></i>
+      <h3 style="color:var(--blue); font-size:1.2rem; margin-bottom:0.5rem;">More Testimonials Coming Soon</h3>
+      <p>
+        More client success stories are being collected and will be published here shortly.
+        Check back later, or visit <a href="https://www.indocitratech.com" target="_blank" rel="noopener" style="color:var(--teal);">www.indocitratech.com</a> for updates.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ CTA ════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <span class="section-label" style="color:rgba(255,255,255,0.55);">Join Our Clients</span>
+    <h2>Ready to Be Our Next Success Story?</h2>
+    <p>Contact us today and let's discuss how we can deliver results for your business.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-outline">
+        <i class="fa-brands fa-whatsapp"></i> +62 812-3546-4274
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
+        <p>Reliable racking, automation, HVAC, and custom machinery solutions from Pasuruan, East Java — trusted by Indonesia's leading industries since 2014.</p>
+        <div class="footer-social" style="margin-top:1.25rem;">
+          <a href="https://www.linkedin.com/company/indocitra-jaya-sentosa" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonial.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://wa.me/6281235464274" target="_blank" rel="noopener">Fredy: +62 812-3546-4274</a></li>
+          <li><a href="https://wa.me/6282245225738" target="_blank" rel="noopener">Hilmy: +62 822-4522-5738</a></li>
+          <li><a href="mailto:indocitra.tech@gmail.com">indocitra.tech@gmail.com</a></li>
+          <li><a href="https://www.indocitratech.com" target="_blank" rel="noopener">www.indocitratech.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> <span>PT Indo Citra Jaya Sentosa</span>. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
