@@ -1,286 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimonials – Indo Citra Jaya Sentosa</title>
-  <meta name="description" content="Client success stories and testimonials for PT Indo Citra Jaya Sentosa." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .tcard {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 2.25rem 2rem;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      position: relative;
-      transition: var(--transition);
-    }
-    .tcard:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 20px 50px rgba(10,69,139,0.13); }
-    .tcard-quote {
-      font-size: 3.5rem;
-      line-height: 1;
-      color: var(--orange);
-      font-family: Georgia, serif;
-      margin-bottom: 0.5rem;
-      opacity: 0.5;
-    }
-    .tcard-text {
-      font-size: 1rem;
-      color: var(--text-dark);
-      line-height: 1.8;
-      font-style: italic;
-      margin-bottom: 1.5rem;
-    }
-    .tcard-divider {
-      width: 40px; height: 3px;
-      background: var(--orange);
-      border-radius: 2px;
-      margin-bottom: 1.25rem;
-    }
-    .tcard-author {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .tcard-avatar {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, var(--blue), var(--blue-light));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: 700;
-      font-family: 'Barlow Condensed', sans-serif;
-      flex-shrink: 0;
-    }
-    .tcard-author-info strong {
-      display: block;
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--blue);
-    }
-    .tcard-author-info span {
-      font-size: 0.8rem;
-      color: var(--text-light);
-    }
-    .tcard-company-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(10,69,139,0.07);
-      color: var(--blue);
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.25rem 0.75rem;
-      border-radius: 20px;
-      margin-bottom: 1rem;
-    }
-    .stars { color: var(--orange); font-size: 0.9rem; margin-bottom: 0.75rem; letter-spacing: 2px; }
-    .coming-soon-note {
-      text-align: center;
-      background: var(--off-white);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      border: 2px dashed var(--border);
-      margin-top: 2.5rem;
-    }
-    .coming-soon-note i { font-size: 2.5rem; color: var(--border); margin-bottom: 1rem; display: block; }
-    .coming-soon-note p { font-size: 0.95rem; color: var(--text-light); max-width: 420px; margin: 0 auto; }
-    @media (max-width: 680px) {
-      .testimonial-grid { grid-template-columns: 1fr; }
-    }
+    .tcard { background:var(--white); border-radius:var(--radius); padding:2.25rem 2rem; border:1px solid var(--border); box-shadow:var(--shadow); transition:var(--transition); }
+    .tcard:hover { transform:translateY(-5px); border-color:var(--blue); box-shadow:0 20px 50px rgba(10,69,139,0.13); }
+    .tcard-company-tag { display:inline-flex; align-items:center; gap:0.4rem; background:rgba(10,69,139,0.07); color:var(--blue); font-size:0.75rem; font-weight:600; padding:0.25rem 0.75rem; border-radius:20px; margin-bottom:1rem; }
+    .stars { color:var(--orange); font-size:0.9rem; margin-bottom:0.75rem; letter-spacing:2px; }
+    .tcard-quote { font-size:3rem; line-height:1; color:var(--orange); font-family:Georgia,serif; margin-bottom:0.5rem; opacity:0.45; }
+    .tcard-text { font-size:1rem; color:var(--text-dark); line-height:1.8; font-style:italic; margin-bottom:1.5rem; }
+    .tcard-divider { width:40px; height:3px; background:var(--orange); border-radius:2px; margin-bottom:1.25rem; }
+    .tcard-author { display:flex; align-items:center; gap:1rem; }
+    .tcard-avatar { width:48px; height:48px; background:linear-gradient(135deg,var(--blue),var(--blue-light)); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--white); font-size:1rem; font-weight:700; font-family:'Barlow Condensed',sans-serif; flex-shrink:0; }
+    .tcard-author-info strong { display:block; font-size:0.92rem; font-weight:600; color:var(--blue); }
+    .tcard-author-info span { font-size:0.8rem; color:var(--text-light); }
+    .testimonial-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:2rem; margin-top:3rem; }
+    @media (max-width:680px) { .testimonial-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-
-<!-- Page transition overlay -->
-<div id="page-transition">
-  <div class="pt-veil"></div>
-  <div class="pt-bar"></div>
-</div>
-
-<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<div id="page-transition"><div class="pt-veil"></div><div class="pt-bar"></div></div>
 <header>
   <div class="container">
     <nav class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa Logo" />
-        <div class="nav-logo-text">
-          <span class="brand">Indo Citra Jaya Sentosa</span>
-          <span class="tagline">Built on Trust, Driven by Reliability</span>
-        </div>
+        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
+        <div class="nav-logo-text"><span class="brand">Indo Citra Jaya Sentosa</span><span class="tagline">Built on Trust, Driven by Reliability</span></div>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="testimonial.html">Testimonial</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li><li><a href="testimonial.html">Testimonial</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="lang-toggle" id="langToggle">🌐 ID</button>
+        <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- ═══════════════════════════════ PAGE HERO ════════════════════════════ -->
 <section class="page-hero">
   <div class="container">
-    <span class="section-label">What Our Clients Say</span>
-    <h1>Client Testimonials</h1>
-    <p>Real feedback from the companies and professionals we've had the privilege of working with.</p>
+    <span class="section-label" data-en="Client Stories" data-id="Kisah Klien">Client Stories</span>
+    <h1 data-en="Testimonials" data-id="Testimoni">Testimonials</h1>
+    <p data-en="Real feedback from the companies we have had the privilege of working with." data-id="Umpan balik nyata dari perusahaan-perusahaan yang telah kami layani.">Real feedback from the companies we have had the privilege of working with.</p>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ TESTIMONIALS ═════════════════════════ -->
+<!-- PROJECT STORIES — moved here from services page -->
+<section class="section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label" data-en="Recent Projects" data-id="Proyek Terkini">Recent Projects</span>
+      <h2 class="section-title" data-en="Project Stories" data-id="Kisah Proyek">Project Stories</h2>
+      <div class="divider center"></div>
+      <p class="section-sub" style="margin:0 auto;" data-en="A selection of recently completed projects across our service areas." data-id="Pilihan proyek yang baru saja diselesaikan di berbagai bidang layanan kami.">A selection of recently completed projects across our service areas.</p>
+    </div>
+    <div class="project-story-grid">
+      <div class="pstory-card reveal">
+        <div class="pstory-year" data-en="2026 · Repair Industrial Parts" data-id="2026 · Perbaikan Suku Cadang Industri">2026 · Repair Industrial Parts</div>
+        <div class="pstory-client">PT. Promed Rahardjo</div>
+        <p data-en="Contract service for compressor maintenance, ensuring continuous uptime for their production facility." data-id="Kontrak servis pemeliharaan kompresor, memastikan uptime yang berkelanjutan untuk fasilitas produksi mereka.">Contract service for compressor maintenance, ensuring continuous uptime for their production facility.</p>
+      </div>
+      <div class="pstory-card reveal" style="transition-delay:0.08s;">
+        <div class="pstory-year" data-en="2026 · Industrial Automation" data-id="2026 · Otomasi Industri">2026 · Industrial Automation</div>
+        <div class="pstory-client">PT. Surabaya Mekabox</div>
+        <p data-en="Conveyor temperature monitoring system with real-time data integration for production quality control." data-id="Sistem pemantauan suhu konveyor dengan integrasi data real-time untuk kontrol kualitas produksi.">Conveyor temperature monitoring system with real-time data integration for production quality control.</p>
+      </div>
+      <div class="pstory-card reveal" style="transition-delay:0.16s;">
+        <div class="pstory-year" data-en="2026 · HVAC" data-id="2026 · HVAC">2026 · HVAC</div>
+        <div class="pstory-client">PT. Tirta Sukses Perkasa</div>
+        <p data-en="Complete overhaul of 3 chiller units, restoring full cooling capacity and operational efficiency." data-id="Overhaul lengkap 3 unit chiller, memulihkan kapasitas pendinginan penuh dan efisiensi operasional.">Complete overhaul of 3 chiller units, restoring full cooling capacity and operational efficiency.</p>
+      </div>
+      <div class="pstory-card reveal" style="transition-delay:0.08s;">
+        <div class="pstory-year" data-en="2025 · HVAC" data-id="2025 · HVAC">2025 · HVAC</div>
+        <div class="pstory-client">PT. Toppan Plastindo</div>
+        <p data-en="Installation and integration of 3 chiller units with full automation control and monitoring interface." data-id="Pemasangan dan integrasi 3 unit chiller dengan kontrol otomasi penuh dan antarmuka pemantauan.">Installation and integration of 3 chiller units with full automation control and monitoring interface.</p>
+      </div>
+      <div class="pstory-card reveal" style="transition-delay:0.16s;">
+        <div class="pstory-year" data-en="2025 · Industrial Automation" data-id="2025 · Otomasi Industri">2025 · Industrial Automation</div>
+        <div class="pstory-client">PT. Cipta Mortar</div>
+        <p data-en="Safety device installation for bagging and packing line, compliant with required safety standards." data-id="Pemasangan perangkat keselamatan untuk lini bagging dan packing, sesuai standar keselamatan yang dipersyaratkan.">Safety device installation for bagging and packing line, compliant with required safety standards.</p>
+      </div>
+      <div class="pstory-card reveal" style="transition-delay:0.24s;">
+        <div class="pstory-year" data-en="2025 · Industrial Automation" data-id="2025 · Otomasi Industri">2025 · Industrial Automation</div>
+        <div class="pstory-client">Autorun Inc (Korea)</div>
+        <p data-en="Safety installation for conveyor system at KT&amp;G facility. SIL-4 compliant safety devices and sensors throughout." data-id="Pemasangan keselamatan untuk sistem konveyor di fasilitas KT&amp;G. Perangkat keselamatan dan sensor yang sesuai SIL-4 di seluruh sistem.">Safety installation for conveyor system at KT&amp;G facility. SIL-4 compliant safety devices and sensors throughout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
 <section class="section">
   <div class="container">
     <div class="text-center reveal">
-      <span class="section-label">Success Stories</span>
-      <h2 class="section-title">Trusted by Leading Companies</h2>
+      <span class="section-label" data-en="What Clients Say" data-id="Kata Klien Kami">What Clients Say</span>
+      <h2 class="section-title" data-en="Client Testimonials" data-id="Testimoni Klien">Client Testimonials</h2>
       <div class="divider center"></div>
-      <p class="section-sub" style="margin:0 auto;">
-        We place our clients' needs at the center of everything we do — and these results speak for themselves.
-      </p>
     </div>
-
     <div class="testimonial-grid">
-
-      <!-- Testimonial 1: Autorun Inc -->
       <div class="tcard reveal">
-        <div class="tcard-company-tag">
-          <i class="fa-solid fa-building"></i> Autorun Inc — Korea
-        </div>
+        <div class="tcard-company-tag"><i class="fa-solid fa-building"></i> Autorun Inc — Korea</div>
         <div class="stars">★★★★★</div>
         <div class="tcard-quote">"</div>
-        <p class="tcard-text">
-          Overall we are satisfied with the service and project execution provided by Indo Citra Jaya Sentosa.
-          The safety installation project was handled professionally, meeting our SIL-4 compliance requirements
-          with strong technical precision and on-time delivery.
-        </p>
+        <p class="tcard-text" data-en="Overall we are satisfied with the service and project execution provided by Indo Citra Jaya Sentosa. The safety installation project was handled professionally, meeting our SIL-4 compliance requirements with strong technical precision and on-time delivery." data-id="Secara keseluruhan kami puas dengan layanan dan pelaksanaan proyek yang diberikan oleh Indo Citra Jaya Sentosa. Proyek pemasangan keselamatan ditangani secara profesional, memenuhi persyaratan kepatuhan SIL-4 kami dengan presisi teknis yang kuat dan pengiriman tepat waktu.">Overall we are satisfied with the service and project execution provided by Indo Citra Jaya Sentosa. The safety installation project was handled professionally, meeting our SIL-4 compliance requirements with strong technical precision and on-time delivery.</p>
         <div class="tcard-divider"></div>
         <div class="tcard-author">
           <div class="tcard-avatar">YJ</div>
           <div class="tcard-author-info">
             <strong>Young-Jang</strong>
-            <span>Sr. Manager, Operation Management Team — Autorun Inc</span>
+            <span data-en="Sr. Manager, Operation Management — Autorun Inc" data-id="Sr. Manajer, Manajemen Operasional — Autorun Inc">Sr. Manager, Operation Management — Autorun Inc</span>
           </div>
         </div>
       </div>
-
-      <!-- Testimonial 2: Indolakto -->
       <div class="tcard reveal" style="transition-delay:0.12s;">
-        <div class="tcard-company-tag">
-          <i class="fa-solid fa-building"></i> PT. Indolakto Pandaan
-        </div>
+        <div class="tcard-company-tag"><i class="fa-solid fa-building"></i> PT. Indolakto Pandaan</div>
         <div class="stars">★★★★★</div>
         <div class="tcard-quote">"</div>
-        <p class="tcard-text">
-          Indocitra can fulfill our needs for this custom machine. The machine and the service
-          was beyond our expectation in a good way. The automated unscrambler system significantly
-          increased our bottle output per shift while reducing manpower costs. This was what we needed.
-        </p>
+        <p class="tcard-text" data-en="Indocitra fulfilled our needs for this custom machine. The machine and the service were beyond our expectations. The automated unscrambler system significantly increased our bottle output per shift while reducing manpower costs — exactly what we needed." data-id="Indocitra memenuhi kebutuhan kami untuk mesin kustom ini. Mesin dan layanannya melebihi harapan kami. Sistem unscrambler otomatis secara signifikan meningkatkan output botol per shift sambil mengurangi biaya tenaga kerja — tepat seperti yang kami butuhkan.">Indocitra fulfilled our needs for this custom machine. The machine and the service were beyond our expectations. The automated unscrambler system significantly increased our bottle output per shift while reducing manpower costs — exactly what we needed.</p>
         <div class="tcard-divider"></div>
         <div class="tcard-author">
           <div class="tcard-avatar">AG</div>
           <div class="tcard-author-info">
             <strong>Mr. Agus</strong>
-            <span>Warehouse Manager — PT. Indolakto Pandaan</span>
+            <span data-en="Warehouse Manager — PT. Indolakto Pandaan" data-id="Manajer Gudang — PT. Indolakto Pandaan">Warehouse Manager — PT. Indolakto Pandaan</span>
           </div>
         </div>
       </div>
-
-    </div>
-
-    <!-- Coming soon note -->
-    <div class="coming-soon-note reveal">
-      <i class="fa-regular fa-comment-dots"></i>
-      <h3 style="color:var(--blue); font-size:1.2rem; margin-bottom:0.5rem;">More Testimonials Coming Soon</h3>
-      <p>
-        More client success stories are being collected and will be published here shortly.
-        Check back later, or visit <a href="https://www.indocitratech.com" target="_blank" rel="noopener" style="color:var(--teal);">www.indocitratech.com</a> for updates.
-      </p>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════ CTA ════════════════════════════════════════ -->
 <section class="cta-section">
   <div class="container">
-    <span class="section-label" style="color:rgba(255,255,255,0.55);">Join Our Clients</span>
-    <h2>Ready to Be Our Next Success Story?</h2>
-    <p>Contact us today and let's discuss how we can deliver results for your business.</p>
+    <span class="section-label" style="color:rgba(255,255,255,0.55);" data-en="Join Our Clients" data-id="Bergabung dengan Klien Kami">Join Our Clients</span>
+    <h2 data-en="Ready to Be Our Next Success Story?" data-id="Siap Menjadi Kisah Sukses Kami Berikutnya?">Ready to Be Our Next Success Story?</h2>
+    <p data-en="Contact us today and let's discuss how we can deliver results for your business." data-id="Hubungi kami hari ini dan mari diskusikan bagaimana kami dapat menghadirkan hasil bagi bisnis Anda.">Contact us today and let's discuss how we can deliver results for your business.</p>
     <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
-      <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-outline">
-        <i class="fa-brands fa-whatsapp"></i> +62 812-3546-4274
-      </a>
+      <a href="contact.html" class="btn btn-primary" data-en="Contact Us" data-id="Hubungi Kami">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> +62 812-3546-4274</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ FOOTER ══════════════════════════════ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
-        <p>Reliable racking, automation, HVAC, and custom machinery solutions from Pasuruan, East Java — trusted by Indonesia's leading industries since 2014.</p>
+        <p data-en="Reliable industrial solutions from Pasuruan, East Java — trusted since 2014." data-id="Solusi industri yang andal dari Pasuruan, Jawa Timur — dipercaya sejak 2014.">Reliable industrial solutions from Pasuruan, East Java — trusted since 2014.</p>
         <div class="footer-social" style="margin-top:1.25rem;">
           <a href="https://www.linkedin.com/company/indocitra-jaya-sentosa" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4 data-en="Quick Links" data-id="Tautan Cepat">Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="testimonial.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-id="Beranda">Home</a></li>
+          <li><a href="about.html" data-en="About Us" data-id="Tentang Kami">About Us</a></li>
+          <li><a href="services.html" data-en="Services" data-id="Layanan">Services</a></li>
+          <li><a href="testimonial.html" data-en="Testimonials" data-id="Testimoni">Testimonials</a></li>
+          <li><a href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 data-en="Contact" data-id="Kontak">Contact</h4>
         <ul>
-          <li><a href="https://wa.me/6281235464274" target="_blank" rel="noopener">Fredy: +62 812-3546-4274</a></li>
-          <li><a href="https://wa.me/6282245225738" target="_blank" rel="noopener">Hilmy: +62 822-4522-5738</a></li>
+          <li><a href="https://wa.me/6281235464274" target="_blank">Fredy: +62 812-3546-4274</a></li>
+          <li><a href="https://wa.me/6282245225738" target="_blank">Hilmy: +62 822-4522-5738</a></li>
           <li><a href="mailto:indocitra.tech@gmail.com">indocitra.tech@gmail.com</a></li>
-          <li><a href="https://www.indocitratech.com" target="_blank" rel="noopener">www.indocitratech.com</a></li>
+          <li><a href="https://www.indocitratech.com" target="_blank">www.indocitratech.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; <span id="year"></span> <span>PT Indo Citra Jaya Sentosa</span>. All rights reserved.
-    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> <span>PT Indo Citra Jaya Sentosa</span>. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></div>
   </div>
 </footer>
-
-<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
+<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

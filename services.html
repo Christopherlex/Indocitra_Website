@@ -1,429 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services – Indo Citra Jaya Sentosa</title>
-  <meta name="description" content="Industrial automation, HVAC, custom machinery, racking, forklift, and repair services by PT Indo Citra Jaya Sentosa." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    /* Extended service grid for 6 cards */
-    .services-grid-6 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    @media (max-width: 900px) {
-      .services-grid-6 { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 560px) {
-      .services-grid-6 { grid-template-columns: 1fr; }
-    }
-    /* Project story cards */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      margin-top: 3rem;
-    }
-    .project-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      transition: var(--transition);
-    }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(10,69,139,0.13); border-color: var(--blue); }
-    .project-card-body { padding: 1.4rem 1.5rem; }
-    .project-client {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--blue);
-      margin-bottom: 0.2rem;
-    }
-    .project-year {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--orange);
-      letter-spacing: 0.08em;
-      margin-bottom: 0.6rem;
-    }
-    .project-card-body p { font-size: 0.88rem; margin: 0; }
-    @media (max-width: 768px) {
-      .projects-grid { grid-template-columns: 1fr; max-width: 420px; margin-left:auto; margin-right:auto; }
-    }
-  </style>
 </head>
 <body>
-
-<!-- Page transition overlay -->
-<div id="page-transition">
-  <div class="pt-veil"></div>
-  <div class="pt-bar"></div>
-</div>
-
-<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<div id="page-transition"><div class="pt-veil"></div><div class="pt-bar"></div></div>
 <header>
   <div class="container">
     <nav class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa Logo" />
-        <div class="nav-logo-text">
-          <span class="brand">Indo Citra Jaya Sentosa</span>
-          <span class="tagline">Built on Trust, Driven by Reliability</span>
-        </div>
+        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
+        <div class="nav-logo-text"><span class="brand">Indo Citra Jaya Sentosa</span><span class="tagline">Built on Trust, Driven by Reliability</span></div>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="testimonial.html">Testimonial</a></li>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li><li><a href="testimonial.html">Testimonial</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
-        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="lang-toggle" id="langToggle">🌐 ID</button>
+        <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- ═══════════════════════════════ PAGE HERO ════════════════════════════ -->
 <section class="page-hero">
   <div class="container">
-    <span class="section-label">What We Offer</span>
-    <h1>Our Services</h1>
-    <p>Six core service areas delivered with precision and reliability. Starting from our head office in Pasuruan, East Java, to clients across Indonesia and beyond.</p>
+    <span class="section-label" data-en="What We Offer" data-id="Yang Kami Tawarkan">What We Offer</span>
+    <h1 data-en="Our Services" data-id="Layanan Kami">Our Services</h1>
+    <p data-en="Six core service areas delivered with precision and reliability from Pasuruan, East Java." data-id="Enam bidang layanan utama yang dihadirkan dengan presisi dan keandalan dari Pasuruan, Jawa Timur.">Six core service areas delivered with precision and reliability from Pasuruan, East Java.</p>
   </div>
 </section>
 
-<!-- ════════════════════════ SERVICE CARDS (6) ══════════════════════════ -->
-<section class="section" style="padding-bottom:40px;">
+<!-- INTERACTIVE SERVICE SPLIT -->
+<section class="section">
   <div class="container">
     <div class="text-center reveal">
-      <span class="section-label">Core Capabilities</span>
-      <h2 class="section-title">Six Pillars of Industrial Excellence</h2>
+      <span class="section-label" data-en="Click to Explore" data-id="Klik untuk Jelajahi">Click to Explore</span>
+      <h2 class="section-title" data-en="What We Specialise In" data-id="Bidang Keahlian Kami">What We Specialise In</h2>
       <div class="divider center"></div>
-      <p class="section-sub" style="margin:0 auto;">
-        Each service is backed by certified engineers, proven methodologies, and a commitment to exceeding client expectations.
-      </p>
     </div>
 
-    <div class="services-grid-6">
+    <div class="svc-layout reveal">
 
-      <!-- 1: Industrial Automation -->
-      <div class="service-card reveal">
-        <div class="service-card-top">
-          <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
-          <h3>Industrial Automation</h3>
+      <!-- LEFT: service list -->
+      <div class="svc-list">
+
+        <div class="svc-item active">
+          <div class="svc-item-icon"><i class="fa-solid fa-microchip"></i></div>
+          <span class="svc-title" data-en="Industrial Automation" data-id="Otomasi Industri">Industrial Automation</span>
+          <i class="fa-solid fa-chevron-right svc-arrow"></i>
         </div>
-        <div class="service-card-body">
-          <p>We design, program, and commission complete industrial automation systems. Starting from PLC-controlled machines to fully integrated SCADA environments. We work with all major platforms to deliver smart, scalable solutions that improve throughput and reduce operational errors.</p>
-          <ul class="service-features">
-            <li>PLC Programming &amp; SCADA Systems</li>
-            <li>Safety Device Installation (SIL-4)</li>
-            <li>Safety Light Curtains &amp; Non-Contact Sensors</li>
-            <li>Control Panel Fabrication &amp; Wiring</li>
-            <li>Industrial IoT &amp; Remote Monitoring</li>
-            <li>Commissioning &amp; Acceptance Testing</li>
-          </ul>
+
+        <div class="svc-item">
+          <div class="svc-item-icon"><i class="fa-solid fa-wind"></i></div>
+          <span class="svc-title" data-en="HVAC Systems" data-id="Sistem HVAC">HVAC Systems</span>
+          <i class="fa-solid fa-chevron-right svc-arrow"></i>
         </div>
-        <div class="service-card-footer">
-          <a href="contact.html" class="btn btn-primary" style="font-size:0.88rem; padding:0.65rem 1.4rem;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-          </a>
+
+        <div class="svc-item">
+          <div class="svc-item-icon"><i class="fa-solid fa-gears"></i></div>
+          <span class="svc-title" data-en="Custom Machinery" data-id="Mesin Kustom">Custom Machinery</span>
+          <i class="fa-solid fa-chevron-right svc-arrow"></i>
         </div>
+
+        <div class="svc-item">
+          <div class="svc-item-icon"><i class="fa-solid fa-wrench"></i></div>
+          <span class="svc-title" data-en="Repair Industrial Parts" data-id="Perbaikan Suku Cadang">Repair Industrial Parts</span>
+          <i class="fa-solid fa-chevron-right svc-arrow"></i>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-item-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <span class="svc-title" data-en="Racking Systems" data-id="Sistem Racking">Racking Systems</span>
+          <i class="fa-solid fa-chevron-right svc-arrow"></i>
+        </div>
+
+        <div class="svc-item">
+          <div class="svc-item-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+          <span class="svc-title" data-en="Forklift" data-id="Forklift">Forklift</span>
+          <i class="fa-solid fa-chevron-right svc-arrow"></i>
+        </div>
+
       </div>
 
-      <!-- 2: HVAC -->
-      <div class="service-card reveal" style="transition-delay:0.07s;">
-        <div class="service-card-top">
-          <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
-          <h3>HVAC Systems</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Complete heating, ventilation, and air conditioning solutions for factories, warehouses, and commercial buildings. We handle design, supply, installation, integration, and preventive maintenance, ensuring energy-efficient and reliable climate control year-round.</p>
-          <ul class="service-features">
-            <li>HVAC System Design &amp; Load Calculation</li>
-            <li>Chiller Installation &amp; Integration</li>
-            <li>AHU, FCU &amp; Ducting Works</li>
-            <li>Chiller Overhaul &amp; Servicing</li>
-            <li>Refrigeration &amp; Cold Storage</li>
-            <li>Preventive Maintenance Programs</li>
-          </ul>
-        </div>
-        <div class="service-card-footer">
-          <a href="contact.html" class="btn btn-primary" style="font-size:0.88rem; padding:0.65rem 1.4rem;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
+      <!-- RIGHT: detail panels -->
+      <div class="svc-detail-panel">
 
-      <!-- 3: Custom Machinery -->
-      <div class="service-card reveal" style="transition-delay:0.14s;">
-        <div class="service-card-top">
-          <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-          <h3>Custom Machinery</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Launched in 2024, our custom machine manufacturing segment delivers tailor-made industrial machines designed to meet your specific operational requirements. We engineer, fabricate, and commission equipment that maximizes productivity while minimizing manpower costs.</p>
-          <ul class="service-features">
-            <li>Custom Machine Design &amp; Fabrication</li>
-            <li>Unscrambler &amp; Conveyor Systems</li>
-            <li>Automated Production Line Equipment</li>
-            <li>Mechanical &amp; Electrical Integration</li>
-            <li>Factory Acceptance Testing (FAT)</li>
-            <li>After-Sales Support &amp; Spare Parts</li>
+        <!-- Automation -->
+        <div class="svc-detail active">
+          <div class="svc-detail-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="svc-detail-tag" data-en="Industrial Automation" data-id="Otomasi Industri">Industrial Automation</div>
+          <h3 data-en="Smarter Processes, Better Results" data-id="Proses Lebih Cerdas, Hasil Lebih Baik">Smarter Processes, Better Results</h3>
+          <p data-en="We design and commission complete industrial automation systems — from single PLC-controlled machines to fully integrated SCADA environments. Our team works with all major platforms to deliver solutions that improve throughput, reduce errors, and cut operating costs." data-id="Kami merancang dan mengoperasikan sistem otomasi industri yang lengkap — dari mesin yang dikendalikan PLC tunggal hingga lingkungan SCADA yang sepenuhnya terintegrasi. Tim kami bekerja dengan semua platform utama untuk menghadirkan solusi yang meningkatkan produktivitas, mengurangi kesalahan, dan memangkas biaya operasional.">We design and commission complete industrial automation systems — from single PLC-controlled machines to fully integrated SCADA environments. Our team works with all major platforms to deliver solutions that improve throughput, reduce errors, and cut operating costs.</p>
+          <ul class="svc-detail-features">
+            <li data-en="PLC Programming (Siemens, Omron, Schneider Electric)" data-id="Pemrograman PLC (Siemens, Omron, Schneider Electric)">PLC Programming (Siemens, Omron, Schneider Electric)</li>
+            <li data-en="SCADA System Design and Implementation" data-id="Perancangan dan Implementasi Sistem SCADA">SCADA System Design and Implementation</li>
+            <li data-en="Safety Device Installation (SIL-4 Compliant)" data-id="Pemasangan Perangkat Keselamatan (Sesuai SIL-4)">Safety Device Installation (SIL-4 Compliant)</li>
+            <li data-en="Control Panel Fabrication and Wiring" data-id="Fabrikasi dan Pengkabelan Panel Kontrol">Control Panel Fabrication and Wiring</li>
+            <li data-en="Industrial IoT and Remote Monitoring" data-id="IoT Industri dan Pemantauan Jarak Jauh">Industrial IoT and Remote Monitoring</li>
+            <li data-en="Commissioning and Acceptance Testing" data-id="Komisioning dan Pengujian Penerimaan">Commissioning and Acceptance Testing</li>
           </ul>
+          <a href="contact.html" class="btn btn-primary" data-en="Get a Quote" data-id="Minta Penawaran">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <div class="service-card-footer">
-          <a href="contact.html" class="btn btn-primary" style="font-size:0.88rem; padding:0.65rem 1.4rem;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
 
-      <!-- 4: Repair Industrial Parts -->
-      <div class="service-card reveal" style="transition-delay:0.21s;">
-        <div class="service-card-top">
-          <div class="service-icon"><i class="fa-solid fa-wrench"></i></div>
-          <h3>Repair Industrial Parts</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Our experienced technicians provide fast, reliable repair services for a wide range of industrial parts and equipment — minimizing downtime and protecting your investment. From compressor maintenance to conveyor systems, we keep your operations running.</p>
-          <ul class="service-features">
-            <li>Compressor Maintenance &amp; Repair</li>
-            <li>Conveyor System Servicing</li>
-            <li>Pump, Motor &amp; Drive Repair</li>
-            <li>Hydraulic &amp; Pneumatic Systems</li>
-            <li>Electrical Panel Troubleshooting</li>
-            <li>Contract Maintenance Programs</li>
+        <!-- HVAC -->
+        <div class="svc-detail">
+          <div class="svc-detail-icon"><i class="fa-solid fa-wind"></i></div>
+          <div class="svc-detail-tag" data-en="HVAC Systems" data-id="Sistem HVAC">HVAC Systems</div>
+          <h3 data-en="Climate Control That Works" data-id="Kendali Iklim yang Andal">Climate Control That Works</h3>
+          <p data-en="From load calculation and system design through to full installation and long-term maintenance, our HVAC team delivers reliable climate control for factories, warehouses, and commercial buildings. We focus on energy efficiency and systems built to last." data-id="Dari kalkulasi beban dan perancangan sistem hingga pemasangan penuh dan pemeliharaan jangka panjang, tim HVAC kami menghadirkan kendali iklim yang andal untuk pabrik, gudang, dan gedung komersial. Kami fokus pada efisiensi energi dan sistem yang tahan lama.">From load calculation and system design through to full installation and long-term maintenance, our HVAC team delivers reliable climate control for factories, warehouses, and commercial buildings. We focus on energy efficiency and systems built to last.</p>
+          <ul class="svc-detail-features">
+            <li data-en="HVAC System Design and Load Calculation" data-id="Perancangan Sistem HVAC dan Kalkulasi Beban">HVAC System Design and Load Calculation</li>
+            <li data-en="Chiller Installation and Integration" data-id="Pemasangan dan Integrasi Chiller">Chiller Installation and Integration</li>
+            <li data-en="AHU, FCU and Ducting Works" data-id="Pekerjaan AHU, FCU, dan Ducting">AHU, FCU and Ducting Works</li>
+            <li data-en="Chiller Overhaul and Servicing" data-id="Overhaul dan Servis Chiller">Chiller Overhaul and Servicing</li>
+            <li data-en="Refrigeration and Cold Storage" data-id="Refrigerasi dan Cold Storage">Refrigeration and Cold Storage</li>
+            <li data-en="Preventive Maintenance Programs" data-id="Program Pemeliharaan Preventif">Preventive Maintenance Programs</li>
           </ul>
+          <a href="contact.html" class="btn btn-primary" data-en="Get a Quote" data-id="Minta Penawaran">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <div class="service-card-footer">
-          <a href="contact.html" class="btn btn-primary" style="font-size:0.88rem; padding:0.65rem 1.4rem;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
 
-      <!-- 5: Racking Systems -->
-      <div class="service-card reveal" style="transition-delay:0.28s;">
-        <div class="service-card-top">
-          <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
-          <h3>Racking Systems</h3>
-        </div>
-        <div class="service-card-body">
-          <p>Our founding expertise — warehouse and industrial racking solutions that maximize space utilization and improve storage efficiency. We supply, design layouts, and install complete racking systems tailored to your warehouse size, load requirements, and workflow.</p>
-          <ul class="service-features">
-            <li>Selective &amp; Drive-In Racking</li>
-            <li>Heavy-Duty Pallet Racking</li>
-            <li>Mezzanine &amp; Multi-Tier Racking</li>
-            <li>Warehouse Layout Design</li>
-            <li>Racking Installation &amp; Modification</li>
-            <li>Safety Inspection &amp; Load Testing</li>
+        <!-- Custom Machinery -->
+        <div class="svc-detail">
+          <div class="svc-detail-icon"><i class="fa-solid fa-gears"></i></div>
+          <div class="svc-detail-tag" data-en="Custom Machinery" data-id="Mesin Kustom">Custom Machinery</div>
+          <h3 data-en="Built for Your Exact Requirements" data-id="Dibangun untuk Kebutuhan Spesifik Anda">Built for Your Exact Requirements</h3>
+          <p data-en="Launched in 2024, our custom machine manufacturing segment designs and builds equipment specifically for your production line. When standard machines do not fit your process, we engineer one that does — and we back it with full after-sales support." data-id="Diluncurkan pada 2024, segmen manufaktur mesin kustom kami merancang dan membangun peralatan khusus untuk lini produksi Anda. Ketika mesin standar tidak sesuai dengan proses Anda, kami merancang yang sesuai — dan kami mendukungnya dengan layanan purna jual penuh.">Launched in 2024, our custom machine manufacturing segment designs and builds equipment specifically for your production line. When standard machines do not fit your process, we engineer one that does — and we back it with full after-sales support.</p>
+          <ul class="svc-detail-features">
+            <li data-en="Custom Machine Design and Fabrication" data-id="Desain dan Fabrikasi Mesin Kustom">Custom Machine Design and Fabrication</li>
+            <li data-en="Unscrambler and Conveyor Systems" data-id="Sistem Unscrambler dan Konveyor">Unscrambler and Conveyor Systems</li>
+            <li data-en="Automated Production Line Equipment" data-id="Peralatan Lini Produksi Otomatis">Automated Production Line Equipment</li>
+            <li data-en="Mechanical and Electrical Integration" data-id="Integrasi Mekanikal dan Elektrikal">Mechanical and Electrical Integration</li>
+            <li data-en="Factory Acceptance Testing" data-id="Pengujian Penerimaan Pabrik">Factory Acceptance Testing</li>
+            <li data-en="After-Sales Support and Spare Parts" data-id="Dukungan Purna Jual dan Suku Cadang">After-Sales Support and Spare Parts</li>
           </ul>
+          <a href="contact.html" class="btn btn-primary" data-en="Get a Quote" data-id="Minta Penawaran">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <div class="service-card-footer">
-          <a href="contact.html" class="btn btn-primary" style="font-size:0.88rem; padding:0.65rem 1.4rem;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
 
-      <!-- 6: Forklift -->
-      <div class="service-card reveal" style="transition-delay:0.35s;">
-        <div class="service-card-top">
-          <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
-          <h3>Forklift</h3>
-        </div>
-        <div class="service-card-body">
-          <p>We provide forklift supply, servicing, and maintenance to support your material handling operations. Our team ensures your forklift fleet operates safely, efficiently, and with minimal downtime, keeping your warehouse and production floor moving at full capacity.</p>
-          <ul class="service-features">
-            <li>Forklift Supply &amp; Procurement</li>
-            <li>Electric &amp; LPG Forklift Servicing</li>
-            <li>Periodic Maintenance Contracts</li>
-            <li>Spare Parts Supply</li>
-            <li>Safety Inspection &amp; Certification</li>
-            <li>Operator Training Support</li>
+        <!-- Repair -->
+        <div class="svc-detail">
+          <div class="svc-detail-icon"><i class="fa-solid fa-wrench"></i></div>
+          <div class="svc-detail-tag" data-en="Repair Industrial Parts" data-id="Perbaikan Suku Cadang Industri">Repair Industrial Parts</div>
+          <h3 data-en="Keep Your Equipment Running" data-id="Jaga Peralatan Anda Tetap Beroperasi">Keep Your Equipment Running</h3>
+          <p data-en="Downtime costs money. Our technicians are experienced in diagnosing and repairing a wide range of industrial equipment quickly and correctly. We also offer contract maintenance programs for clients who want consistent, scheduled servicing." data-id="Downtime menguras biaya. Teknisi kami berpengalaman dalam mendiagnosis dan memperbaiki berbagai peralatan industri dengan cepat dan tepat. Kami juga menawarkan program pemeliharaan kontrak bagi klien yang menginginkan servis terjadwal dan konsisten.">Downtime costs money. Our technicians are experienced in diagnosing and repairing a wide range of industrial equipment quickly and correctly. We also offer contract maintenance programs for clients who want consistent, scheduled servicing.</p>
+          <ul class="svc-detail-features">
+            <li data-en="Compressor Maintenance and Repair" data-id="Pemeliharaan dan Perbaikan Kompresor">Compressor Maintenance and Repair</li>
+            <li data-en="Conveyor System Servicing" data-id="Servis Sistem Konveyor">Conveyor System Servicing</li>
+            <li data-en="Pump, Motor and Drive Repair" data-id="Perbaikan Pompa, Motor, dan Drive">Pump, Motor and Drive Repair</li>
+            <li data-en="Hydraulic and Pneumatic Systems" data-id="Sistem Hidrolik dan Pneumatik">Hydraulic and Pneumatic Systems</li>
+            <li data-en="Electrical Panel Troubleshooting" data-id="Pemecahan Masalah Panel Listrik">Electrical Panel Troubleshooting</li>
+            <li data-en="Contract Maintenance Programs" data-id="Program Pemeliharaan Kontrak">Contract Maintenance Programs</li>
           </ul>
+          <a href="contact.html" class="btn btn-primary" data-en="Get a Quote" data-id="Minta Penawaran">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <div class="service-card-footer">
-          <a href="contact.html" class="btn btn-primary" style="font-size:0.88rem; padding:0.65rem 1.4rem;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
 
-    </div>
+        <!-- Racking -->
+        <div class="svc-detail">
+          <div class="svc-detail-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="svc-detail-tag" data-en="Racking Systems" data-id="Sistem Racking">Racking Systems</div>
+          <h3 data-en="Maximise Your Storage Space" data-id="Maksimalkan Ruang Penyimpanan Anda">Maximise Your Storage Space</h3>
+          <p data-en="Racking is where we started, and it remains one of our strongest capabilities. We design warehouse layouts, supply the right racking system for your load and workflow requirements, and handle the full installation." data-id="Racking adalah tempat kami memulai, dan ini tetap menjadi salah satu kemampuan terkuat kami. Kami merancang tata letak gudang, menyediakan sistem racking yang tepat untuk kebutuhan beban dan alur kerja Anda, serta menangani pemasangan penuh.">Racking is where we started, and it remains one of our strongest capabilities. We design warehouse layouts, supply the right racking system for your load and workflow requirements, and handle the full installation.</p>
+          <ul class="svc-detail-features">
+            <li data-en="Selective and Drive-In Racking" data-id="Racking Selektif dan Drive-In">Selective and Drive-In Racking</li>
+            <li data-en="Heavy-Duty Pallet Racking" data-id="Racking Palet Tugas Berat">Heavy-Duty Pallet Racking</li>
+            <li data-en="Mezzanine and Multi-Tier Racking" data-id="Racking Mezzanine dan Multi-Tingkat">Mezzanine and Multi-Tier Racking</li>
+            <li data-en="Warehouse Layout Design" data-id="Desain Tata Letak Gudang">Warehouse Layout Design</li>
+            <li data-en="Racking Installation and Modification" data-id="Pemasangan dan Modifikasi Racking">Racking Installation and Modification</li>
+            <li data-en="Safety Inspection and Load Testing" data-id="Inspeksi Keselamatan dan Uji Beban">Safety Inspection and Load Testing</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" data-en="Get a Quote" data-id="Minta Penawaran">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <!-- Forklift -->
+        <div class="svc-detail">
+          <div class="svc-detail-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+          <div class="svc-detail-tag" data-en="Forklift" data-id="Forklift">Forklift</div>
+          <h3 data-en="Keep Your Fleet Moving" data-id="Jaga Armada Anda Bergerak">Keep Your Fleet Moving</h3>
+          <p data-en="We supply forklifts and provide servicing and maintenance to keep your material handling operations running without interruption. Our team handles both electric and LPG models, with scheduled maintenance contracts available for ongoing fleet management." data-id="Kami menyediakan forklift dan layanan servis serta pemeliharaan untuk menjaga operasional material handling Anda berjalan tanpa gangguan. Tim kami menangani model listrik maupun LPG, dengan kontrak pemeliharaan terjadwal yang tersedia untuk manajemen armada berkelanjutan.">We supply forklifts and provide servicing and maintenance to keep your material handling operations running without interruption. Our team handles both electric and LPG models, with scheduled maintenance contracts available for ongoing fleet management.</p>
+          <ul class="svc-detail-features">
+            <li data-en="Forklift Supply and Procurement" data-id="Penyediaan dan Pengadaan Forklift">Forklift Supply and Procurement</li>
+            <li data-en="Electric and LPG Forklift Servicing" data-id="Servis Forklift Listrik dan LPG">Electric and LPG Forklift Servicing</li>
+            <li data-en="Periodic Maintenance Contracts" data-id="Kontrak Pemeliharaan Berkala">Periodic Maintenance Contracts</li>
+            <li data-en="Spare Parts Supply" data-id="Penyediaan Suku Cadang">Spare Parts Supply</li>
+            <li data-en="Safety Inspection and Certification" data-id="Inspeksi Keselamatan dan Sertifikasi">Safety Inspection and Certification</li>
+            <li data-en="Operator Training Support" data-id="Dukungan Pelatihan Operator">Operator Training Support</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary" data-en="Get a Quote" data-id="Minta Penawaran">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div><!-- /svc-detail-panel -->
+    </div><!-- /svc-layout -->
   </div>
 </section>
 
-<!-- ════════════════════════ PROCESS SECTION ════════════════════════════ -->
+<!-- PROCESS -->
 <section class="process-section">
   <div class="container">
     <div class="text-center reveal">
-      <span class="section-label">How We Work</span>
-      <h2 class="section-title">Our Project Process</h2>
+      <span class="section-label" data-en="How We Work" data-id="Cara Kami Bekerja">How We Work</span>
+      <h2 class="section-title" data-en="Our Project Process" data-id="Proses Proyek Kami">Our Project Process</h2>
       <div class="divider center"></div>
-      <p class="section-sub" style="margin:0 auto;">
-        A structured, transparent approach that keeps clients informed and projects on track from day one.
-      </p>
     </div>
     <div class="process-steps">
-      <div class="process-step reveal">
-        <div class="step-num">01</div>
-        <h4>Consultation</h4>
-        <p>We meet to understand your requirements, site conditions, and operational goals in detail.</p>
-      </div>
-      <div class="process-step reveal" style="transition-delay:0.1s;">
-        <div class="step-num">02</div>
-        <h4>Engineering Design</h4>
-        <p>Our team prepares a detailed technical proposal, drawings, and bill of materials for your review.</p>
-      </div>
-      <div class="process-step reveal" style="transition-delay:0.2s;">
-        <div class="step-num">03</div>
-        <h4>Installation</h4>
-        <p>Certified technicians execute the work safely, on schedule, and to specification. No shortcuts.</p>
-      </div>
-      <div class="process-step reveal" style="transition-delay:0.3s;">
-        <div class="step-num">04</div>
-        <h4>Handover &amp; Support</h4>
-        <p>Full commissioning, documentation handover, training, and ongoing after-sales support included.</p>
-      </div>
+      <div class="process-step reveal"><div class="step-num">01</div><h4 data-en="Consultation" data-id="Konsultasi">Consultation</h4><p data-en="We meet to understand your requirements, site conditions, and operational goals." data-id="Kami bertemu untuk memahami kebutuhan, kondisi lokasi, dan tujuan operasional Anda.">We meet to understand your requirements, site conditions, and operational goals.</p></div>
+      <div class="process-step reveal" style="transition-delay:0.1s;"><div class="step-num">02</div><h4 data-en="Engineering Design" data-id="Desain Teknik">Engineering Design</h4><p data-en="Our team prepares a detailed technical proposal, drawings, and bill of materials." data-id="Tim kami menyiapkan proposal teknis, gambar, dan daftar material yang terperinci.">Our team prepares a detailed technical proposal, drawings, and bill of materials.</p></div>
+      <div class="process-step reveal" style="transition-delay:0.2s;"><div class="step-num">03</div><h4 data-en="Installation" data-id="Pemasangan">Installation</h4><p data-en="Certified technicians execute the work safely, on schedule, and to specification." data-id="Teknisi bersertifikat menjalankan pekerjaan dengan aman, tepat waktu, dan sesuai spesifikasi.">Certified technicians execute the work safely, on schedule, and to specification.</p></div>
+      <div class="process-step reveal" style="transition-delay:0.3s;"><div class="step-num">04</div><h4 data-en="Handover &amp; Support" data-id="Serah Terima &amp; Dukungan">Handover &amp; Support</h4><p data-en="Full commissioning, documentation handover, training, and after-sales support included." data-id="Komisioning penuh, serah terima dokumentasi, pelatihan, dan dukungan purna jual sudah termasuk.">Full commissioning, documentation handover, training, and after-sales support included.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════ PROJECT STORIES ════════════════════════════ -->
-<section class="section" style="background:var(--white);">
-  <div class="container">
-    <div class="text-center reveal">
-      <span class="section-label">Real Projects</span>
-      <h2 class="section-title">Recent Project Stories</h2>
-      <div class="divider center"></div>
-      <p class="section-sub" style="margin:0 auto;">
-        A selection of completed projects demonstrating our capabilities across service areas.
-      </p>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card reveal">
-        <div class="project-card-body">
-          <div class="project-year">2026 · Repair Industrial Parts</div>
-          <div class="project-client">PT. Promed Rahardjo</div>
-          <p>Contract service for compressor maintenance, ensuring continuous uptime for their production facility.</p>
-        </div>
-      </div>
-      <div class="project-card reveal" style="transition-delay:0.08s;">
-        <div class="project-card-body">
-          <div class="project-year">2026 · Industrial Automation</div>
-          <div class="project-client">PT. Surabaya Mekabox</div>
-          <p>Conveyor temperature monitoring system. Real-time data integration for production quality control.</p>
-        </div>
-      </div>
-      <div class="project-card reveal" style="transition-delay:0.16s;">
-        <div class="project-card-body">
-          <div class="project-year">2026 · HVAC</div>
-          <div class="project-client">PT. Tirta Sukses Perkasa</div>
-          <p>Complete overhaul of 3 chiller units — restoring full cooling capacity and operational efficiency.</p>
-        </div>
-      </div>
-      <div class="project-card reveal" style="transition-delay:0.08s;">
-        <div class="project-card-body">
-          <div class="project-year">2025 · HVAC</div>
-          <div class="project-client">PT. Toppan Plastindo</div>
-          <p>Installation and integration of 3 chiller units with full automation control and monitoring interface.</p>
-        </div>
-      </div>
-      <div class="project-card reveal" style="transition-delay:0.16s;">
-        <div class="project-card-body">
-          <div class="project-year">2025 · Industrial Automation</div>
-          <div class="project-client">PT. Cipta Mortar</div>
-          <p>Safety device installation for bagging and packing line, compliant safety system integration.</p>
-        </div>
-      </div>
-      <div class="project-card reveal" style="transition-delay:0.24s;">
-        <div class="project-card-body">
-          <div class="project-year">2025 · Industrial Automation</div>
-          <div class="project-client">Autorun Inc (Korea)</div>
-          <p>Safety installation for conveyor system at KT&amp;G facility — SIL-4 compliant safety devices and sensors.</p>
-        </div>
-      </div>
-    </div>
-    <div class="text-center" style="margin-top:2.5rem;">
-      <a href="contact.html" class="btn btn-teal">Discuss Your Project <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════════════ CTA ════════════════════════════════════════ -->
 <section class="cta-section">
   <div class="container">
-    <span class="section-label" style="color:rgba(255,255,255,0.55);">Start a Project</span>
-    <h2>Have a Project in Mind?</h2>
-    <p>Tell us about your requirements and we'll prepare a tailored proposal. Based in Pasuruan, serving all of Indonesia.</p>
+    <span class="section-label" style="color:rgba(255,255,255,0.55);" data-en="Start a Project" data-id="Mulai Proyek">Start a Project</span>
+    <h2 data-en="Have a Project in Mind?" data-id="Punya Proyek yang Ingin Dikerjakan?">Have a Project in Mind?</h2>
+    <p data-en="Tell us about your requirements and we'll prepare a tailored proposal. Based in Pasuruan, serving all of Indonesia." data-id="Ceritakan kebutuhan Anda dan kami akan menyiapkan proposal yang disesuaikan. Berbasis di Pasuruan, melayani seluruh Indonesia.">Tell us about your requirements and we'll prepare a tailored proposal. Based in Pasuruan, serving all of Indonesia.</p>
     <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">Get a Free Quote <i class="fa-solid fa-arrow-right"></i></a>
-      <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-outline">
-        <i class="fa-brands fa-whatsapp"></i> +62 812-3546-4274
-      </a>
+      <a href="contact.html" class="btn btn-primary" data-en="Get a Free Quote" data-id="Minta Penawaran Gratis">Get a Free Quote <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> +62 812-3546-4274</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ FOOTER ══════════════════════════════ -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
-        <p>Reliable racking, automation, HVAC, and custom machinery solutions from Pasuruan, East Java — trusted by Indonesia's leading industries since 2014.</p>
+        <p data-en="Reliable industrial solutions from Pasuruan, East Java — trusted since 2014." data-id="Solusi industri yang andal dari Pasuruan, Jawa Timur — dipercaya sejak 2014.">Reliable industrial solutions from Pasuruan, East Java — trusted since 2014.</p>
         <div class="footer-social" style="margin-top:1.25rem;">
           <a href="https://www.linkedin.com/company/indocitra-jaya-sentosa" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4 data-en="Quick Links" data-id="Tautan Cepat">Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="testimonial.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-id="Beranda">Home</a></li>
+          <li><a href="about.html" data-en="About Us" data-id="Tentang Kami">About Us</a></li>
+          <li><a href="services.html" data-en="Services" data-id="Layanan">Services</a></li>
+          <li><a href="testimonial.html" data-en="Testimonials" data-id="Testimoni">Testimonials</a></li>
+          <li><a href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 data-en="Contact" data-id="Kontak">Contact</h4>
         <ul>
-          <li><a href="https://wa.me/6281235464274" target="_blank" rel="noopener">Fredy: +62 812-3546-4274</a></li>
-          <li><a href="https://wa.me/6282245225738" target="_blank" rel="noopener">Hilmy: +62 822-4522-5738</a></li>
+          <li><a href="https://wa.me/6281235464274" target="_blank">Fredy: +62 812-3546-4274</a></li>
+          <li><a href="https://wa.me/6282245225738" target="_blank">Hilmy: +62 822-4522-5738</a></li>
           <li><a href="mailto:indocitra.tech@gmail.com">indocitra.tech@gmail.com</a></li>
-          <li><a href="https://www.indocitratech.com" target="_blank" rel="noopener">www.indocitratech.com</a></li>
+          <li><a href="https://www.indocitratech.com" target="_blank">www.indocitratech.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; <span id="year"></span> <span>PT Indo Citra Jaya Sentosa</span>. All rights reserved.
-    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> <span>PT Indo Citra Jaya Sentosa</span>. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></div>
   </div>
 </footer>
-
-<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
+<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

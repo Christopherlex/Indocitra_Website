@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indo Citra Jaya Sentosa – Built on Trust, Driven by Reliability</title>
-  <meta name="description" content="Indo Citra Jaya Sentosa – professional automation, HVAC, and heavy machinery solutions in Indonesia." />
+  <meta name="description" content="PT Indo Citra Jaya Sentosa – industrial automation, HVAC, custom machinery, racking and forklift solutions in Indonesia." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,26 +12,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+<div id="page-transition"><div class="pt-veil"></div><div class="pt-bar"></div></div>
 
-<!-- Page transition overlay -->
-<div id="page-transition">
-  <div class="pt-veil"></div>
-  <div class="pt-bar"></div>
-</div>
-
-<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<!-- HEADER -->
 <header>
   <div class="container">
     <nav class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <!-- Logo image — file: images/indocitra.png -->
-        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa Logo" />
+        <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
         <div class="nav-logo-text">
           <span class="brand">Indo Citra Jaya Sentosa</span>
           <span class="tagline">Built on Trust, Driven by Reliability</span>
         </div>
       </a>
-
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -39,8 +32,10 @@
         <li><a href="testimonial.html">Testimonial</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-
       <div class="nav-cta">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-icon">🌐</span> ID
+        </button>
         <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-primary">
           <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
@@ -52,92 +47,82 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
-      <span class="hero-eyebrow">Automation · HVAC · Machinery</span>
-      <h1>Indo Citra Jaya<br>Sentosa</h1>
-      <p class="hero-tagline">"Built on Trust, Driven by Reliability"</p>
-      <p class="hero-desc">
-        From racking systems and industrial automation to HVAC, custom machinery, and forklift services —
-        reliable industrial solutions for Indonesia's leading industries since 2014.
-      </p>
+      <span class="hero-eyebrow" data-en="Automation · HVAC · Machinery" data-id="Otomasi · HVAC · Mesin">Automation · HVAC · Machinery</span>
+      <h1>Indo Citra Jaya Sentosa</h1>
+      <p class="hero-tagline" data-en='"Built on Trust, Driven by Reliability"' data-id='"Dibangun atas Kepercayaan, Digerakkan oleh Keandalan"'>"Built on Trust, Driven by Reliability"</p>
+      <p class="hero-desc" data-en="From racking systems and industrial automation to HVAC, custom machinery, and forklift services — reliable industrial solutions for Indonesia's leading industries since 2014." data-id="Dari sistem racking dan otomasi industri hingga HVAC, mesin kustom, dan layanan forklift — solusi industri yang andal untuk perusahaan-perusahaan terkemuka di Indonesia sejak 2014.">From racking systems and industrial automation to HVAC, custom machinery, and forklift services — reliable industrial solutions for Indonesia's leading industries since 2014.</p>
       <div class="hero-actions">
-        <a href="services.html" class="btn btn-primary">Our Services <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        <a href="services.html" class="btn btn-primary" data-en="Our Services" data-id="Layanan Kami">Our Services <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-outline" data-en="Contact Us" data-id="Hubungi Kami">Contact Us</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ STATS BAR ═══════════════════════════ -->
+<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="container">
-    <div class="stats-inner">
+    <div class="stats-inner" style="grid-template-columns:repeat(3,1fr);">
       <div class="stat-item">
-        <div class="stat-num" data-target="5" data-suffix="+">5+</div>
-        <div class="stat-label">Years of Experience</div>
+        <div class="stat-num" data-founded="2014" data-suffix="+">12+</div>
+        <div class="stat-label" data-en="Years of Experience" data-id="Tahun Pengalaman">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="500" data-suffix="+">500+</div>
+        <div class="stat-label" data-en="Projects Completed" data-id="Proyek Selesai">Projects Completed</div>
       </div>
       <div class="stat-item">
         <div class="stat-num" data-target="50" data-suffix="+">50+</div>
-        <div class="stat-label">Projects Completed</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num" data-target="20" data-suffix="+">20+</div>
-        <div class="stat-label">Trusted Clients</div>
+        <div class="stat-label" data-en="Trusted Clients" data-id="Klien Terpercaya">Trusted Clients</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════ INTRO ═══════════════════════════════ -->
+<!-- INTRO -->
 <section class="intro-section">
   <div class="container">
     <div class="intro-grid">
       <div class="intro-body reveal">
-        <span class="section-label">Who We Are</span>
-        <h2 class="section-title">Engineering Solutions<br>Built to Last</h2>
+        <span class="section-label" data-en="Who We Are" data-id="Siapa Kami">Who We Are</span>
+        <h2 class="section-title" data-en="Engineering Solutions Built to Last" data-id="Solusi Teknik yang Dirancang untuk Bertahan">Engineering Solutions Built to Last</h2>
         <div class="divider"></div>
-        <p class="intro-accent">
-          PT Indo Citra Jaya Sentosa is a trusted industrial solutions provider based in Pasuruan, East Java.
-        </p>
-        <p>
-          Established in 2014 with racking systems, we expanded into automation in 2020 and custom machine manufacturing in 2024. We serve clients across manufacturing, food & beverage, power, and commercial sectors. Starting from local SMEs to international companies like Autorun Inc (Korea) and Countec Ltd.
-        </p>
-        <p>
-          Our team of certified engineers delivers efficient, tailor-made solutions that enhance your operational productivity. With a results-driven approach and reliable after-sales service, we build long-term partnerships based on trust, not just transactions.
-        </p>
-        <a href="about.html" class="btn btn-teal" style="margin-top:1.5rem;">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
+        <p class="intro-accent" data-en="PT Indo Citra Jaya Sentosa is a trusted industrial solutions provider based in Pasuruan, East Java." data-id="PT Indo Citra Jaya Sentosa adalah penyedia solusi industri terpercaya yang berbasis di Pasuruan, Jawa Timur.">PT Indo Citra Jaya Sentosa is a trusted industrial solutions provider based in Pasuruan, East Java.</p>
+        <p data-en="Established in 2014 with racking systems, we expanded into automation in 2020 and custom machine manufacturing in 2024. We serve clients across manufacturing, food and beverage, power, and commercial sectors — from local businesses to international companies like Autorun Inc (Korea) and Countec Ltd." data-id="Berdiri sejak 2014 dengan fokus pada sistem racking, kami berkembang ke segmen otomasi pada 2020 dan manufaktur mesin kustom pada 2024. Kami melayani klien di sektor manufaktur, makanan dan minuman, ketenagalistrikan, serta komersial.">Established in 2014 with racking systems, we expanded into automation in 2020 and custom machine manufacturing in 2024. We serve clients across manufacturing, food and beverage, power, and commercial sectors.</p>
+        <p data-en="Our certified engineers deliver efficient, tailor-made solutions that enhance your operational productivity. With a results-driven approach and reliable after-sales service, we build long-term partnerships based on trust." data-id="Tim insinyur bersertifikat kami menghadirkan solusi yang efisien dan terukur untuk meningkatkan produktivitas operasional Anda. Dengan pendekatan berorientasi hasil dan layanan purna jual yang andal, kami membangun kemitraan jangka panjang yang didasarkan pada kepercayaan.">Our certified engineers deliver efficient, tailor-made solutions that enhance your operational productivity. With a results-driven approach and reliable after-sales service, we build long-term partnerships based on trust.</p>
+        <a href="about.html" class="btn btn-teal" style="margin-top:1.5rem;" data-en="Learn More About Us" data-id="Pelajari Lebih Lanjut">Learn More About Us <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-
       <div class="intro-visual reveal" style="transition-delay:0.15s;">
         <div class="intro-card">
           <div class="intro-card-icon"><i class="fa-solid fa-microchip"></i></div>
           <div>
-            <h4>Industrial Automation</h4>
-            <p>PLC/SCADA systems, process control, smart factory integration</p>
+            <h4 data-en="Industrial Automation" data-id="Otomasi Industri">Industrial Automation</h4>
+            <p data-en="PLC/SCADA systems, process control, smart factory integration" data-id="Sistem PLC/SCADA, kendali proses, integrasi pabrik cerdas">PLC/SCADA systems, process control, smart factory integration</p>
           </div>
         </div>
         <div class="intro-card">
           <div class="intro-card-icon"><i class="fa-solid fa-wind"></i></div>
           <div>
-            <h4>HVAC Systems</h4>
-            <p>Design, installation & maintenance for commercial and industrial facilities</p>
+            <h4 data-en="HVAC Systems" data-id="Sistem HVAC">HVAC Systems</h4>
+            <p data-en="Design, installation and maintenance for commercial and industrial facilities" data-id="Perancangan, pemasangan, dan pemeliharaan untuk fasilitas komersial dan industri">Design, installation and maintenance for commercial and industrial facilities</p>
           </div>
         </div>
         <div class="intro-card">
           <div class="intro-card-icon"><i class="fa-solid fa-gears"></i></div>
           <div>
-            <h4>Heavy Machinery</h4>
-            <p>Procurement, installation, repair and preventive maintenance services</p>
+            <h4 data-en="Custom Machinery" data-id="Mesin Kustom">Custom Machinery</h4>
+            <p data-en="Tailor-made machines designed for your specific operational needs" data-id="Mesin yang dirancang khusus sesuai kebutuhan operasional Anda">Tailor-made machines designed for your specific operational needs</p>
           </div>
         </div>
         <div class="intro-card">
           <div class="intro-card-icon"><i class="fa-solid fa-headset"></i></div>
           <div>
-            <h4>Reliable After-Sales Support</h4>
-            <p>Dedicated support team ready to assist you whenever you need help</p>
+            <h4 data-en="Reliable After-Sales Service" data-id="Layanan Purna Jual yang Andal">Reliable After-Sales Service</h4>
+            <p data-en="Dedicated support team ready to assist whenever you need help" data-id="Tim dukungan yang siap membantu kapanpun Anda membutuhkan">Dedicated support team ready to assist whenever you need help</p>
           </div>
         </div>
       </div>
@@ -145,75 +130,50 @@
   </div>
 </section>
 
-<!-- ════════════════════════ HIGHLIGHT CARDS ════════════════════════════ -->
+<!-- HIGHLIGHT CARDS -->
 <section class="section highlights-section">
   <div class="container">
     <div class="text-center reveal">
-      <span class="section-label">Our Core Services</span>
-      <h2 class="section-title">What We Deliver</h2>
+      <span class="section-label" data-en="Our Core Services" data-id="Layanan Utama Kami">Our Core Services</span>
+      <h2 class="section-title" data-en="What We Deliver" data-id="Yang Kami Tawarkan">What We Deliver</h2>
       <div class="divider center"></div>
-      <p class="section-sub" style="margin:0 auto;">
-        From racking and automation to HVAC, custom machinery, repair services, and forklift. Six service areas, one trusted partner.
-      </p>
+      <p class="section-sub" style="margin:0 auto;" data-en="From racking and automation to HVAC, custom machinery, repair services, and forklift. Six service areas, one trusted partner." data-id="Dari racking dan otomasi hingga HVAC, mesin kustom, perbaikan, dan forklift. Enam bidang layanan, satu mitra terpercaya.">From racking and automation to HVAC, custom machinery, repair services, and forklift. Six service areas, one trusted partner.</p>
     </div>
     <div class="highlights-grid">
       <div class="highlight-card reveal">
         <div class="hc-icon"><i class="fa-solid fa-microchip"></i></div>
-        <h3>Industrial Automation</h3>
-        <p>
-          From PLC programming to full SCADA system integration, we automate your processes to increase
-          efficiency, reduce human error, and lower operational costs. We work with all major brands
-          including Siemens, Omron, Schneider Electric, and more.
-        </p>
-        <a href="services.html" class="btn btn-teal" style="margin-top:1.25rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
-          Learn More <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <h3 data-en="Industrial Automation" data-id="Otomasi Industri">Industrial Automation</h3>
+        <p data-en="We automate your processes using PLC programming and full SCADA integration to boost efficiency, reduce errors, and lower operating costs." data-id="Kami mengotomasi proses Anda menggunakan pemrograman PLC dan integrasi SCADA penuh untuk meningkatkan efisiensi dan mengurangi biaya operasional.">We automate your processes using PLC programming and full SCADA integration to boost efficiency, reduce errors, and lower operating costs.</p>
+        <a href="services.html" class="btn btn-teal" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.2rem;" data-en="Learn More" data-id="Pelajari">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="highlight-card reveal" style="transition-delay:0.1s;">
         <div class="hc-icon"><i class="fa-solid fa-wind"></i></div>
-        <h3>HVAC Systems</h3>
-        <p>
-          Complete heating, ventilation, and air conditioning solutions for manufacturing plants, warehouses,
-          and commercial buildings. Energy-efficient design, professional installation, and ongoing preventive
-          maintenance programs tailored to your facility's needs.
-        </p>
-        <a href="services.html" class="btn btn-teal" style="margin-top:1.25rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
-          Learn More <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <h3 data-en="HVAC Systems" data-id="Sistem HVAC">HVAC Systems</h3>
+        <p data-en="Complete HVAC solutions for factories, warehouses, and commercial buildings. Energy-efficient design, professional installation, and ongoing maintenance." data-id="Solusi HVAC lengkap untuk pabrik, gudang, dan gedung komersial. Desain hemat energi, pemasangan profesional, dan pemeliharaan berkelanjutan.">Complete HVAC solutions for factories, warehouses, and commercial buildings. Energy-efficient design, professional installation, and ongoing maintenance.</p>
+        <a href="services.html" class="btn btn-teal" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.2rem;" data-en="Learn More" data-id="Pelajari">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="highlight-card reveal" style="transition-delay:0.2s;">
         <div class="hc-icon"><i class="fa-solid fa-gears"></i></div>
-        <h3>Custom Machinery &amp; More</h3>
-        <p>
-          Tailor-made machine manufacturing (since 2024), industrial parts repair, racking systems,
-          and forklift services. This is a complete ecosystem of industrial solutions to keep your facility
-          operating at peak performance day in, day out.
-        </p>
-        <a href="services.html" class="btn btn-teal" style="margin-top:1.25rem; font-size:0.85rem; padding:0.6rem 1.2rem;">
-          Learn More <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <h3 data-en="Custom Machinery &amp; More" data-id="Mesin Kustom &amp; Lainnya">Custom Machinery &amp; More</h3>
+        <p data-en="Tailor-made machine manufacturing, industrial parts repair, racking systems, and forklift services to keep your facility running at full capacity." data-id="Manufaktur mesin kustom, perbaikan suku cadang industri, sistem racking, dan layanan forklift untuk menjaga fasilitas Anda beroperasi penuh.">Tailor-made machine manufacturing, industrial parts repair, racking systems, and forklift services to keep your facility running at full capacity.</p>
+        <a href="services.html" class="btn btn-teal" style="margin-top:1.25rem;font-size:0.85rem;padding:0.6rem 1.2rem;" data-en="Learn More" data-id="Pelajari">Learn More <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════ TRUSTED BY ════════════════════════════════ -->
+<!-- TRUSTED BY -->
 <section class="trusted-section">
   <div class="container">
     <div class="text-center reveal">
-      <span class="section-label">Our Clients</span>
-      <h2 class="section-title">Trusted By Industry Leaders</h2>
+      <span class="section-label" data-en="Our Clients" data-id="Klien Kami">Our Clients</span>
+      <h2 class="section-title" data-en="Trusted By Industry Leaders" data-id="Dipercaya oleh Pemimpin Industri">Trusted By Industry Leaders</h2>
       <div class="divider center"></div>
-      <p class="section-sub">
-        Proud to serve these respected companies and organizations across Indonesia.
-      </p>
+      <p class="section-sub" data-en="Proud to serve these respected companies and organizations across Indonesia." data-id="Bangga melayani perusahaan dan organisasi terkemuka di seluruh Indonesia.">Proud to serve these respected companies and organizations across Indonesia.</p>
     </div>
   </div>
-
-  <!-- Infinite scroll logo strip — replace images/custN.png with your own logo files -->
   <div class="logos-track-wrapper" id="logoWrapper">
     <div class="logos-track" id="logosTrack">
-      <!-- First set (logos 1–8) -->
       <img src="images/cust1.png" alt="Club Air Mineral" />
       <img src="images/cust2.png" alt="PLN Nusantara Power Construction" />
       <img src="images/cust3.png" alt="PT Berlina" />
@@ -222,7 +182,7 @@
       <img src="images/cust6.png" alt="eTika" />
       <img src="images/cust7.png" alt="IMLI" />
       <img src="images/cust8.png" alt="WOM Finance" />
-      <!-- Second set — exact duplicate (logos 1–8 again) -->
+      <img src="images/cust9.png" alt="PT Dunia Kimia Jaya" />
       <img src="images/cust1.png" alt="Club Air Mineral" />
       <img src="images/cust2.png" alt="PLN Nusantara Power Construction" />
       <img src="images/cust3.png" alt="PT Berlina" />
@@ -231,75 +191,63 @@
       <img src="images/cust6.png" alt="eTika" />
       <img src="images/cust7.png" alt="IMLI" />
       <img src="images/cust8.png" alt="WOM Finance" />
+      <img src="images/cust9.png" alt="PT Dunia Kimia Jaya" />
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════ CTA ════════════════════════════════════════ -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <span class="section-label" style="color:rgba(255,255,255,0.55);">Get In Touch</span>
-    <h2>Ready to Start Your Project?</h2>
-    <p>Our team is ready to assess your needs and provide a tailored engineering solution.</p>
+    <span class="section-label" style="color:rgba(255,255,255,0.55);" data-en="Get In Touch" data-id="Hubungi Kami">Get In Touch</span>
+    <h2 data-en="Ready to Start Your Project?" data-id="Siap Memulai Proyek Anda?">Ready to Start Your Project?</h2>
+    <p data-en="Our team is ready to assess your needs and provide a tailored engineering solution." data-id="Tim kami siap mengkaji kebutuhan Anda dan memberikan solusi teknik yang tepat sasaran.">Our team is ready to assess your needs and provide a tailored engineering solution.</p>
     <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">Contact Us Today <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="btn btn-primary" data-en="Contact Us Today" data-id="Hubungi Kami Sekarang">Contact Us Today <i class="fa-solid fa-arrow-right"></i></a>
       <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" class="btn btn-outline">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp: +62 812-3546-4274
+        <i class="fa-brands fa-whatsapp"></i> +62 812-3546-4274
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════ FOOTER ══════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/indocitra.png" alt="Indo Citra Jaya Sentosa" />
-        <p>Reliable racking, automation, HVAC, and custom machinery solutions from Pasuruan, East Java — trusted by Indonesia's leading industries since 2014.</p>
+        <p data-en="Reliable racking, automation, HVAC, and custom machinery solutions from Pasuruan, East Java — trusted by Indonesia's leading industries since 2014." data-id="Solusi racking, otomasi, HVAC, dan mesin kustom yang andal dari Pasuruan, Jawa Timur — dipercaya oleh industri terkemuka Indonesia sejak 2014.">Reliable racking, automation, HVAC, and custom machinery solutions from Pasuruan, East Java — trusted by Indonesia's leading industries since 2014.</p>
         <div class="footer-social" style="margin-top:1.25rem;">
-          <a href="https://www.linkedin.com/company/indocitra-jaya-sentosa" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
+          <a href="https://www.linkedin.com/company/indocitra-jaya-sentosa" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-
       <div class="footer-col">
-        <h4>Quick Links</h4>
+        <h4 data-en="Quick Links" data-id="Tautan Cepat">Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="testimonial.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-id="Beranda">Home</a></li>
+          <li><a href="about.html" data-en="About Us" data-id="Tentang Kami">About Us</a></li>
+          <li><a href="services.html" data-en="Services" data-id="Layanan">Services</a></li>
+          <li><a href="testimonial.html" data-en="Testimonials" data-id="Testimoni">Testimonials</a></li>
+          <li><a href="contact.html" data-en="Contact" data-id="Kontak">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4 data-en="Contact" data-id="Kontak">Contact</h4>
         <ul>
           <li><a href="https://wa.me/6281235464274" target="_blank" rel="noopener">Fredy: +62 812-3546-4274</a></li>
           <li><a href="https://wa.me/6282245225738" target="_blank" rel="noopener">Hilmy: +62 822-4522-5738</a></li>
           <li><a href="mailto:indocitra.tech@gmail.com">indocitra.tech@gmail.com</a></li>
-          <li><a href="https://www.linkedin.com/company/indocitra-jaya-sentosa" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.indocitratech.com" target="_blank" rel="noopener">www.indocitratech.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; <span id="year"></span> <span>Indo Citra Jaya Sentosa</span>. All rights reserved.
-    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> <span>PT Indo Citra Jaya Sentosa</span>. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></div>
   </div>
 </footer>
 
-<!-- WhatsApp floating button -->
-<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
+<a class="wa-float" href="https://wa.me/6281235464274" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 <script src="script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
