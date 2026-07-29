@@ -282,6 +282,7 @@ function renderNewsGrid() {
   var grid = document.getElementById('newsGrid');
   if (!grid || !newsData) return;
 
+  grid.className = 'news-timeline';
   if (newsData.length === 0) {
     grid.innerHTML = '<div class="content-empty-state"><i class="fa-regular fa-newspaper"></i>' +
       (pickLang({en:'No news posts yet. Check back soon.', id:'Belum ada berita. Silakan cek kembali nanti.'})) + '</div>';
@@ -291,28 +292,41 @@ function renderNewsGrid() {
   grid.innerHTML = newsData.map(function(item, idx) {
     var media = detectMedia(item.content);
     var thumb = mediaThumbnail(item.content);
+    var isVideo = media.type === 'video';
+    var typeLabel = isVideo
+      ? '<span class="news-card-type"><i class="fa-solid fa-play" style="font-size:0.6rem;"></i> Video</span>'
+      : '';
     return (
-      '<div class="news-card" data-idx="' + idx + '">' +
-        '<div style="position:relative;">' +
-          '<img class="news-card-img" src="' + thumb + '" ' +
-            'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.title) + '"/>' +
-          (media.type === 'video' ? '<div class="news-card-play"><i class="fa-solid fa-play"></i></div>' : '') +
-        '</div>' +
-        '<div class="news-card-body">' +
-          '<div class="news-card-meta">' +
-            '<span class="news-card-date">' + fmtDate(item.date) + '</span>' +
+      '<div class="news-item" data-idx="' + idx + '">' +
+        '<div class="news-item-dot"></div>' +
+        '<div class="news-card">' +
+          '<div class="news-card-thumb">' +
+            (isVideo ? '<span class="news-card-video-badge">Video</span>' : '') +
+            '<img class="news-card-img" src="' + thumb + '" ' +
+              'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.title) + '"/>' +
+            (isVideo ? '<div class="news-card-play"><i class="fa-solid fa-play"></i></div>' : '') +
           '</div>' +
-          '<div class="news-card-title">' + pickLang(item.title) + '</div>' +
-          '<div class="news-card-excerpt">' + pickLang(item.excerpt) + '</div>' +
-          '<span class="news-card-more">' + pickLang({en:'Read More',id:'Baca Selengkapnya'}) + ' <i class="fa-solid fa-arrow-right"></i></span>' +
+          '<div class="news-card-body">' +
+            '<div class="news-card-meta">' +
+              '<span class="news-card-date">' + fmtDate(item.date) + '</span>' +
+              typeLabel +
+            '</div>' +
+            '<div class="news-card-title">' + pickLang(item.title) + '</div>' +
+            '<div class="news-card-excerpt">' + pickLang(item.excerpt) + '</div>' +
+            '<span class="news-card-more">' +
+              (isVideo ? pickLang({en:'Watch Video',id:'Tonton Video'}) : pickLang({en:'Read More',id:'Baca Selengkapnya'})) +
+              ' <i class="fa-solid fa-arrow-right"></i>' +
+            '</span>' +
+          '</div>' +
         '</div>' +
       '</div>'
     );
   }).join('');
 
-  grid.querySelectorAll('.news-card').forEach(function(card) {
-    card.addEventListener('click', function() {
-      openNewsModal(newsData[parseInt(card.dataset.idx)]);
+  grid.className = 'news-timeline';
+  grid.querySelectorAll('.news-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      openNewsModal(newsData[parseInt(item.dataset.idx)]);
     });
   });
 }
