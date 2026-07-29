@@ -17,7 +17,7 @@
    web" CSV links here once ready.
 ───────────────────────────────────────────── */
 var CONTENT_CONFIG = {
-  newsCsvUrl:    '',   /* e.g. 'https://docs.google.com/spreadsheets/d/e/XXXX/pub?gid=0&single=true&output=csv' */
+  newsCsvUrl:    'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBYw1MD-mSFZvOHntRdJZS_xJ8BVxQdVW5GiZnRWi9IBc-vHJcT1FyQa2NYR-jf5Qsilz0dV9tMBl_/pub?gid=0&single=true&output=csv',
   catalogCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQsriBx1jrcrym5rvJxgXYZqPYKkUKVC_XyrmnsEMqXTUDCCY9p8Hqn4pbyTK7cltV6SCrgbjC3ZIog/pub?gid=0&single=true&output=csv',
   newsImageBase:    'images/news/',
   catalogImageBase: 'images/catalog/'
