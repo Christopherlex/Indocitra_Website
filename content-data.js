@@ -18,7 +18,7 @@
 ───────────────────────────────────────────── */
 var CONTENT_CONFIG = {
   newsCsvUrl:    '',   /* e.g. 'https://docs.google.com/spreadsheets/d/e/XXXX/pub?gid=0&single=true&output=csv' */
-  catalogCsvUrl: '',   /* same idea, different sheet tab */
+  catalogCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQsriBx1jrcrym5rvJxgXYZqPYKkUKVC_XyrmnsEMqXTUDCCY9p8Hqn4pbyTK7cltV6SCrgbjC3ZIog/pub?gid=0&single=true&output=csv',
   newsImageBase:    'images/news/',
   catalogImageBase: 'images/catalog/'
 };
@@ -160,37 +160,56 @@ function parseCSV(text) {
   });
 }
 
+/* Normalizes a header name for forgiving lookups:
+   "Short Desc", "ShortDesc", "short_desc" all match the same field. */
+function normKey(s) {
+  return String(s).replace(/[^a-z0-9]/gi, '').toLowerCase();
+}
+
+/* Looks up a value from a CSV row object, trying each candidate name
+   (in order) with normalized matching, so header naming doesn't need
+   to be exact. Returns '' if none of the candidates are found. */
+function getField(rowObj, candidates) {
+  var normMap = {};
+  Object.keys(rowObj).forEach(function(k) { normMap[normKey(k)] = rowObj[k]; });
+  for (var i = 0; i < candidates.length; i++) {
+    var val = normMap[normKey(candidates[i])];
+    if (val !== undefined && val !== '') return val;
+  }
+  return '';
+}
+
 /* Convert raw CSV rows into the same shape as SAMPLE_NEWS/SAMPLE_CATALOG.
    Expected sheet columns (English text works for both languages if you
    don't need separate ID translations — EN/ID columns are optional). */
 function csvRowsToNews(rows) {
   return rows.map(function(r) {
     return {
-      title: { en: r['Title_EN'] || r['Title'] || '', id: r['Title_ID'] || r['Title'] || '' },
-      category: { en: r['Category_EN'] || r['Category'] || '', id: r['Category_ID'] || r['Category'] || '' },
-      date: r['Date'] || '',
-      image: r['Image'] || '',
-      excerpt: { en: r['Excerpt_EN'] || r['Excerpt'] || '', id: r['Excerpt_ID'] || r['Excerpt'] || '' },
-      content: { en: r['Content_EN'] || r['Content'] || '', id: r['Content_ID'] || r['Content'] || '' },
-      video: r['Video'] || ''
+      title: { en: getField(r,['Title_EN','Title']), id: getField(r,['Title_ID','Title']) },
+      category: { en: getField(r,['Category_EN','Category']), id: getField(r,['Category_ID','Category']) },
+      date: getField(r,['Date']),
+      image: getField(r,['Image']),
+      excerpt: { en: getField(r,['Excerpt_EN','Excerpt']), id: getField(r,['Excerpt_ID','Excerpt']) },
+      content: { en: getField(r,['Content_EN','Content']), id: getField(r,['Content_ID','Content']) },
+      video: getField(r,['Video'])
     };
   });
 }
 function csvRowsToCatalog(rows) {
   return rows.map(function(r) {
-    var specsRaw = r['Specs_EN'] || r['Specs'] || '';
+    var specsRaw = getField(r,['Specs_EN','Specs']);
     var specsList = specsRaw.split('|').map(function(s){return s.trim();}).filter(Boolean);
-    var specsRawId = r['Specs_ID'] || specsRaw;
+    var specsRawId = getField(r,['Specs_ID']) || specsRaw;
     var specsListId = specsRawId.split('|').map(function(s){return s.trim();}).filter(Boolean);
     var specs = specsList.map(function(s, idx) {
       return { en: s, id: specsListId[idx] || s };
     });
     return {
-      name: { en: r['Name_EN'] || r['Name'] || '', id: r['Name_ID'] || r['Name'] || '' },
-      category: { en: r['Category_EN'] || r['Category'] || '', id: r['Category_ID'] || r['Category'] || '' },
-      image: r['Image'] || '',
-      shortDesc: { en: r['ShortDesc_EN'] || r['ShortDesc'] || '', id: r['ShortDesc_ID'] || r['ShortDesc'] || '' },
-      fullDesc: { en: r['FullDesc_EN'] || r['FullDesc'] || '', id: r['FullDesc_ID'] || r['FullDesc'] || '' },
+      name: { en: getField(r,['Name_EN','Name']), id: getField(r,['Name_ID','Name']) },
+      category: { en: getField(r,['Category_EN','Category']), id: getField(r,['Category_ID','Category']) },
+      image: getField(r,['Image']),
+      shortDesc: { en: getField(r,['ShortDesc_EN','ShortDesc','Short Desc']), id: getField(r,['ShortDesc_ID','Short Desc']) },
+      fullDesc: { en: getField(r,['FullDesc_EN','FullDesc','Full Desc']), id: getField(r,['FullDesc_ID','Full Desc']) },
       specs: specs
     };
   });
