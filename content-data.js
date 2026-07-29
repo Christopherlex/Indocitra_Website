@@ -42,30 +42,24 @@ var PLACEHOLDER_IMG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
 var SAMPLE_NEWS = [
   {
     title: { en: 'Completed: Chiller Overhaul for PT Tirta Sukses Perkasa', id: 'Selesai: Overhaul Chiller untuk PT Tirta Sukses Perkasa' },
-    category: { en: 'Project Update', id: 'Update Proyek' },
     date: '2026-06-15',
-    image: '',
     excerpt: { en: 'Our team successfully completed a full overhaul of 3 chiller units, restoring cooling capacity and improving energy efficiency for the client\'s production facility.', id: 'Tim kami berhasil menyelesaikan overhaul penuh terhadap 3 unit chiller, memulihkan kapasitas pendinginan dan meningkatkan efisiensi energi bagi fasilitas produksi klien.' },
-    content: { en: 'Our HVAC team recently completed a comprehensive overhaul project for PT Tirta Sukses Perkasa, covering three industrial chiller units critical to their production process.\n\nThe project included full mechanical inspection, refrigerant system servicing, compressor evaluation, and control system calibration. Following the overhaul, the client reported a noticeable improvement in cooling consistency and a reduction in energy consumption.\n\nThis project reflects our ongoing commitment to helping clients maximize the lifespan and efficiency of their critical industrial equipment.', id: 'Tim HVAC kami baru saja menyelesaikan proyek overhaul menyeluruh untuk PT Tirta Sukses Perkasa, mencakup tiga unit chiller industri yang penting bagi proses produksi mereka.\n\nProyek ini meliputi inspeksi mekanis penuh, servis sistem refrigeran, evaluasi kompresor, dan kalibrasi sistem kontrol. Setelah overhaul selesai, klien melaporkan peningkatan signifikan dalam konsistensi pendinginan serta penurunan konsumsi energi.\n\nProyek ini mencerminkan komitmen berkelanjutan kami untuk membantu klien memaksimalkan umur pakai dan efisiensi peralatan industri penting mereka.' },
-    video: ''
+    caption: { en: 'Our HVAC team recently completed a comprehensive overhaul project for PT Tirta Sukses Perkasa, covering three industrial chiller units critical to their production process.\n\nThe project included full mechanical inspection, refrigerant system servicing, compressor evaluation, and control system calibration. Following the overhaul, the client reported a noticeable improvement in cooling consistency and a reduction in energy consumption.\n\nThis project reflects our ongoing commitment to helping clients maximize the lifespan and efficiency of their critical industrial equipment.', id: 'Tim HVAC kami baru saja menyelesaikan proyek overhaul menyeluruh untuk PT Tirta Sukses Perkasa, mencakup tiga unit chiller industri yang penting bagi proses produksi mereka.\n\nProyek ini meliputi inspeksi mekanis penuh, servis sistem refrigeran, evaluasi kompresor, dan kalibrasi sistem kontrol. Setelah overhaul selesai, klien melaporkan peningkatan signifikan dalam konsistensi pendinginan serta penurunan konsumsi energi.\n\nProyek ini mencerminkan komitmen berkelanjutan kami untuk membantu klien memaksimalkan umur pakai dan efisiensi peralatan industri penting mereka.' },
+    content: ''
   },
   {
     title: { en: 'Understanding SIL-4 Safety Systems in Industrial Automation', id: 'Memahami Sistem Keselamatan SIL-4 dalam Otomasi Industri' },
-    category: { en: 'Industry Insight', id: 'Wawasan Industri' },
     date: '2026-05-20',
-    image: '',
     excerpt: { en: 'A closer look at SIL-4 compliant safety installations and why they matter for high-risk industrial environments.', id: 'Tinjauan lebih dekat mengenai instalasi keselamatan yang sesuai SIL-4 dan mengapa penting bagi lingkungan industri berisiko tinggi.' },
-    content: { en: 'Safety Integrity Level 4 (SIL-4) represents the highest tier of functional safety classification for industrial control systems. Facilities handling high-risk processes rely on SIL-4 rated components, such as safety light curtains and non-contact sensors, to protect workers from serious injury.\n\nOur automation team has completed several SIL-4 compliant safety installations for clients including Autorun Inc (Korea), covering conveyor systems and packaging lines. Each installation is tested rigorously before handover to ensure full compliance with international safety standards.\n\nIf your facility handles high-risk machinery, a proper safety audit is the first step toward SIL-4 compliance.', id: 'Safety Integrity Level 4 (SIL-4) merupakan tingkat klasifikasi keselamatan fungsional tertinggi untuk sistem kontrol industri. Fasilitas yang menangani proses berisiko tinggi mengandalkan komponen bersertifikat SIL-4, seperti safety light curtain dan sensor non-kontak, untuk melindungi pekerja dari cedera serius.\n\nTim otomasi kami telah menyelesaikan beberapa instalasi keselamatan yang sesuai SIL-4 untuk klien termasuk Autorun Inc (Korea), mencakup sistem konveyor dan lini pengemasan. Setiap instalasi diuji secara ketat sebelum serah terima untuk memastikan kepatuhan penuh terhadap standar keselamatan internasional.\n\nJika fasilitas Anda menangani mesin berisiko tinggi, audit keselamatan yang tepat adalah langkah pertama menuju kepatuhan SIL-4.' },
-    video: ''
+    caption: { en: 'Safety Integrity Level 4 (SIL-4) represents the highest tier of functional safety classification for industrial control systems. Facilities handling high-risk processes rely on SIL-4 rated components, such as safety light curtains and non-contact sensors, to protect workers from serious injury.\n\nOur automation team has completed several SIL-4 compliant safety installations for clients including Autorun Inc (Korea), covering conveyor systems and packaging lines. Each installation is tested rigorously before handover to ensure full compliance with international safety standards.\n\nIf your facility handles high-risk machinery, a proper safety audit is the first step toward SIL-4 compliance.', id: 'Safety Integrity Level 4 (SIL-4) merupakan tingkat klasifikasi keselamatan fungsional tertinggi untuk sistem kontrol industri. Fasilitas yang menangani proses berisiko tinggi mengandalkan komponen bersertifikat SIL-4, seperti safety light curtain dan sensor non-kontak, untuk melindungi pekerja dari cedera serius.\n\nTim otomasi kami telah menyelesaikan beberapa instalasi keselamatan yang sesuai SIL-4 untuk klien termasuk Autorun Inc (Korea), mencakup sistem konveyor dan lini pengemasan. Setiap instalasi diuji secara ketat sebelum serah terima untuk memastikan kepatuhan penuh terhadap standar keselamatan internasional.\n\nJika fasilitas Anda menangani mesin berisiko tinggi, audit keselamatan yang tepat adalah langkah pertama menuju kepatuhan SIL-4.' },
+    content: ''
   },
   {
     title: { en: 'A Decade of Industrial Solutions: Reflecting on 2014–2026', id: 'Satu Dekade Solusi Industri: Refleksi 2014–2026' },
-    category: { en: 'Company', id: 'Perusahaan' },
     date: '2026-04-10',
-    image: '',
     excerpt: { en: 'From racking systems in 2014 to a full-service industrial solutions provider today — a look back at our journey.', id: 'Dari sistem racking pada 2014 hingga menjadi penyedia solusi industri lengkap hari ini — melihat kembali perjalanan kami.' },
-    content: { en: 'PT Indo Citra Jaya Sentosa was founded in 2014 with a simple focus: reliable racking systems for warehouses across East Java. Over the past decade, that focus has grown into a full-service industrial solutions provider.\n\nIn 2020, we expanded into industrial automation. In 2024, we launched a dedicated custom machine manufacturing segment. Today, we serve over 50 clients across manufacturing, food and beverage, and energy sectors, with international partnerships extending to Korea.\n\nNone of this would be possible without the trust our clients have placed in us. As we look ahead, we remain committed to the same principle that got us here: built on trust, driven by reliability.', id: 'PT Indo Citra Jaya Sentosa didirikan pada 2014 dengan fokus sederhana: sistem racking yang andal untuk gudang-gudang di Jawa Timur. Selama satu dekade terakhir, fokus tersebut berkembang menjadi penyedia solusi industri yang lengkap.\n\nPada 2020, kami memperluas ke segmen otomasi industri. Pada 2024, kami meluncurkan segmen manufaktur mesin kustom khusus. Hari ini, kami melayani lebih dari 50 klien di sektor manufaktur, makanan dan minuman, serta energi, dengan kemitraan internasional yang meluas hingga Korea.\n\nSemua ini tidak akan mungkin terjadi tanpa kepercayaan yang klien kami berikan. Ke depannya, kami tetap berkomitmen pada prinsip yang sama yang membawa kami sampai di sini: dibangun atas kepercayaan, digerakkan oleh keandalan.' },
-    video: ''
+    caption: { en: 'PT Indo Citra Jaya Sentosa was founded in 2014 with a simple focus: reliable racking systems for warehouses across East Java. Over the past decade, that focus has grown into a full-service industrial solutions provider.\n\nIn 2020, we expanded into industrial automation. In 2024, we launched a dedicated custom machine manufacturing segment. Today, we serve over 50 clients across manufacturing, food and beverage, and energy sectors, with international partnerships extending to Korea.\n\nNone of this would be possible without the trust our clients have placed in us. As we look ahead, we remain committed to the same principle that got us here: built on trust, driven by reliability.', id: 'PT Indo Citra Jaya Sentosa didirikan pada 2014 dengan fokus sederhana: sistem racking yang andal untuk gudang-gudang di Jawa Timur. Selama satu dekade terakhir, fokus tersebut berkembang menjadi penyedia solusi industri yang lengkap.\n\nPada 2020, kami memperluas ke segmen otomasi industri. Pada 2024, kami meluncurkan segmen manufaktur mesin kustom khusus. Hari ini, kami melayani lebih dari 50 klien di sektor manufaktur, makanan dan minuman, serta energi, dengan kemitraan internasional yang meluas hingga Korea.\n\nSemua ini tidak akan mungkin terjadi tanpa kepercayaan yang klien kami berikan. Ke depannya, kami tetap berkomitmen pada prinsip yang sama yang membawa kami sampai di sini: dibangun atas kepercayaan, digerakkan oleh keandalan.' },
+    content: ''
   }
 ];
 
@@ -190,12 +184,10 @@ function csvRowsToNews(rows) {
   return rows.map(function(r) {
     return {
       title: { en: getField(r,['Title_EN','Title']), id: getField(r,['Title_ID','Title']) },
-      category: { en: getField(r,['Category_EN','Category']), id: getField(r,['Category_ID','Category']) },
       date: getField(r,['Date']),
-      image: getField(r,['Image']),
       excerpt: { en: getField(r,['Excerpt_EN','Excerpt']), id: getField(r,['Excerpt_ID','Excerpt']) },
-      content: { en: getField(r,['Content_EN','Content']), id: getField(r,['Content_ID','Content']) },
-      video: getField(r,['Video'])
+      caption: { en: getField(r,['Caption_EN','Caption']), id: getField(r,['Caption_ID','Caption']) },
+      content: getField(r,['Content'])
     };
   });
 }
@@ -231,11 +223,30 @@ function pickLang(field) {
 }
 function youtubeEmbed(url) {
   if (!url) return '';
-  var id = '';
-  var m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([\w-]{11})/);
-  if (m) id = m[1];
+  var id = extractYouTubeId(url);
   if (!id) return '';
   return 'https://www.youtube.com/embed/' + id;
+}
+function extractYouTubeId(url) {
+  if (!url) return '';
+  var m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
+  return m ? m[1] : '';
+}
+/* Detects whether the Content field is a YouTube link or an image link,
+   so the sheet only needs ONE column for either media type. */
+function detectMedia(url) {
+  if (!url) return { type: 'none' };
+  var ytId = extractYouTubeId(url);
+  if (ytId) return { type: 'video', id: ytId, embedUrl: 'https://www.youtube.com/embed/' + ytId };
+  return { type: 'image', url: url };
+}
+/* A thumbnail image for card previews — uses the YouTube thumbnail
+   automatically if Content is a video, or the image itself otherwise. */
+function mediaThumbnail(url) {
+  var media = detectMedia(url);
+  if (media.type === 'video') return 'https://img.youtube.com/vi/' + media.id + '/hqdefault.jpg';
+  if (media.type === 'image') return media.url;
+  return PLACEHOLDER_IMG;
 }
 function fmtDate(dateStr) {
   if (!dateStr) return '';
@@ -278,13 +289,17 @@ function renderNewsGrid() {
   }
 
   grid.innerHTML = newsData.map(function(item, idx) {
+    var media = detectMedia(item.content);
+    var thumb = mediaThumbnail(item.content);
     return (
       '<div class="news-card" data-idx="' + idx + '">' +
-        '<img class="news-card-img" src="' + resolveImage(item.image, CONTENT_CONFIG.newsImageBase) + '" ' +
-          'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.title) + '"/>' +
+        '<div style="position:relative;">' +
+          '<img class="news-card-img" src="' + thumb + '" ' +
+            'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.title) + '"/>' +
+          (media.type === 'video' ? '<div class="news-card-play"><i class="fa-solid fa-play"></i></div>' : '') +
+        '</div>' +
         '<div class="news-card-body">' +
           '<div class="news-card-meta">' +
-            '<span class="news-card-tag">' + pickLang(item.category) + '</span>' +
             '<span class="news-card-date">' + fmtDate(item.date) + '</span>' +
           '</div>' +
           '<div class="news-card-title">' + pickLang(item.title) + '</div>' +
@@ -307,19 +322,26 @@ function openNewsModal(item) {
   var modal = document.getElementById('detailModal');
   if (!backdrop || !modal) return;
 
-  var videoEmbed = youtubeEmbed(item.video);
-  var paragraphs = pickLang(item.content).split('\n').filter(Boolean).map(function(p) {
+  var media = detectMedia(item.content);
+  var paragraphs = pickLang(item.caption).split('\n').filter(Boolean).map(function(p) {
     return '<p>' + p + '</p>';
   }).join('');
 
+  var mediaHtml = '';
+  if (media.type === 'video') {
+    mediaHtml = '<iframe class="detail-modal-video" src="' + media.embedUrl + '" allowfullscreen></iframe>';
+  } else if (media.type === 'image') {
+    mediaHtml = '<img class="detail-modal-img" src="' + media.url + '" ' +
+      'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.title) + '"/>';
+  } else {
+    mediaHtml = '<img class="detail-modal-img" src="' + PLACEHOLDER_IMG + '" alt="' + pickLang(item.title) + '"/>';
+  }
+
   modal.innerHTML =
     '<button class="detail-modal-close" id="detailModalClose"><i class="fa-solid fa-xmark"></i></button>' +
-    '<img class="detail-modal-img" src="' + resolveImage(item.image, CONTENT_CONFIG.newsImageBase) + '" ' +
-      'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.title) + '"/>' +
-    (videoEmbed ? '<iframe class="detail-modal-video" src="' + videoEmbed + '" allowfullscreen></iframe>' : '') +
+    mediaHtml +
     '<div class="detail-modal-body">' +
       '<div class="detail-modal-meta">' +
-        '<span class="detail-modal-tag">' + pickLang(item.category) + '</span>' +
         '<span class="detail-modal-date">' + fmtDate(item.date) + '</span>' +
       '</div>' +
       '<h3>' + pickLang(item.title) + '</h3>' +
