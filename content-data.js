@@ -74,6 +74,7 @@ var SAMPLE_CATALOG = [
     name: { en: 'Heavy-Duty Pallet Racking System', id: 'Sistem Racking Palet Tugas Berat' },
     category: { en: 'Racking', id: 'Racking' },
     image: '',
+    stock: 'In Stock',
     shortDesc: { en: 'Industrial-grade selective pallet racking for high-density warehouse storage.', id: 'Racking palet selektif kelas industri untuk penyimpanan gudang dengan kepadatan tinggi.' },
     fullDesc: { en: 'Our heavy-duty pallet racking systems are engineered for demanding warehouse environments, supporting loads up to several tonnes per level. Configurations are fully customizable to your warehouse dimensions and workflow.', id: 'Sistem racking palet tugas berat kami dirancang untuk lingkungan gudang yang menuntut, mendukung beban hingga beberapa ton per tingkat. Konfigurasi dapat disesuaikan sepenuhnya dengan dimensi gudang dan alur kerja Anda.' },
     specs: [
@@ -87,6 +88,7 @@ var SAMPLE_CATALOG = [
     name: { en: 'Industrial PLC Control Panel', id: 'Panel Kontrol PLC Industri' },
     category: { en: 'Automation', id: 'Otomasi' },
     image: '',
+    stock: 'Made to Order',
     shortDesc: { en: 'Custom-built control panels for automation and process control applications.', id: 'Panel kontrol yang dibangun khusus untuk aplikasi otomasi dan kendali proses.' },
     fullDesc: { en: 'We design and fabricate PLC control panels tailored to your specific automation requirements, compatible with Siemens, Omron, and Schneider Electric platforms. Every panel is factory tested before delivery.', id: 'Kami merancang dan memfabrikasi panel kontrol PLC yang disesuaikan dengan kebutuhan otomasi spesifik Anda, kompatibel dengan platform Siemens, Omron, dan Schneider Electric. Setiap panel diuji di pabrik sebelum pengiriman.' },
     specs: [
@@ -100,6 +102,7 @@ var SAMPLE_CATALOG = [
     name: { en: 'Electric Forklift (3-Ton Capacity)', id: 'Forklift Listrik (Kapasitas 3 Ton)' },
     category: { en: 'Forklift', id: 'Forklift' },
     image: '',
+    stock: 'In Stock',
     shortDesc: { en: 'Reliable electric forklift for indoor and outdoor material handling.', id: 'Forklift listrik yang andal untuk material handling dalam dan luar ruangan.' },
     fullDesc: { en: 'A dependable 3-tonne capacity electric forklift, ideal for warehouse and light industrial use. Includes standard warranty and access to our servicing and maintenance programs.', id: 'Forklift listrik dengan kapasitas 3 ton yang dapat diandalkan, ideal untuk penggunaan gudang dan industri ringan. Termasuk garansi standar dan akses ke program servis dan pemeliharaan kami.' },
     specs: [
@@ -113,6 +116,7 @@ var SAMPLE_CATALOG = [
     name: { en: 'Industrial Chiller Unit', id: 'Unit Chiller Industri' },
     category: { en: 'HVAC', id: 'HVAC' },
     image: '',
+    stock: 'Limited Stock',
     shortDesc: { en: 'High-capacity chiller units for industrial cooling applications.', id: 'Unit chiller berkapasitas tinggi untuk aplikasi pendinginan industri.' },
     fullDesc: { en: 'Our industrial chiller units are suited for manufacturing plants requiring consistent, high-capacity cooling. Installation, integration, and ongoing maintenance services are available.', id: 'Unit chiller industri kami cocok untuk pabrik manufaktur yang membutuhkan pendinginan konsisten berkapasitas tinggi. Layanan pemasangan, integrasi, dan pemeliharaan berkelanjutan tersedia.' },
     specs: [
@@ -210,6 +214,7 @@ function csvRowsToCatalog(rows) {
       image: getField(r,['Image']),
       shortDesc: { en: getField(r,['ShortDesc_EN','ShortDesc','Short Desc']), id: getField(r,['ShortDesc_ID','Short Desc']) },
       fullDesc: { en: getField(r,['FullDesc_EN','FullDesc','Full Desc']), id: getField(r,['FullDesc_ID','Full Desc']) },
+      stock: getField(r,['Stock']),
       specs: specs
     };
   });
@@ -239,6 +244,22 @@ function fmtDate(dateStr) {
   var opts = { year: 'numeric', month: 'long', day: 'numeric' };
   var l = (typeof lang !== 'undefined') ? lang : 'en';
   return d.toLocaleDateString(l === 'id' ? 'id-ID' : 'en-US', opts);
+}
+
+/* Builds a colored stock badge from free-text stock values.
+   Detects "out of stock" style wording (EN/ID) and colors red;
+   anything else defaults to a positive/neutral badge. */
+function stockBadge(stockText) {
+  if (!stockText) return '';
+  var t = stockText.toLowerCase();
+  var cls = 'stock-neutral';
+  var icon = 'fa-circle-info';
+  if (t.indexOf('out') >= 0 || t.indexOf('habis') >= 0 || t === '0') {
+    cls = 'stock-out'; icon = 'fa-circle-xmark';
+  } else if (t.indexOf('in stock') >= 0 || t.indexOf('tersedia') >= 0 || t.indexOf('ready') >= 0) {
+    cls = 'stock-in'; icon = 'fa-circle-check';
+  }
+  return '<span class="stock-badge ' + cls + '"><i class="fa-solid ' + icon + '"></i>' + stockText + '</span>';
 }
 
 /* ─────────────────────────────────────────────
@@ -362,7 +383,7 @@ function renderCatalogGrid() {
         '<img class="catalog-card-img" src="' + resolveImage(item.image, CONTENT_CONFIG.catalogImageBase) + '" ' +
           'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.name) + '"/>' +
         '<div class="catalog-card-body">' +
-          '<div class="catalog-card-cat">' + pickLang(item.category) + '</div>' +
+          '<div class="catalog-card-cat">' + pickLang(item.category) + stockBadge(item.stock) + '</div>' +
           '<div class="catalog-card-title">' + pickLang(item.name) + '</div>' +
           '<div class="catalog-card-desc">' + pickLang(item.shortDesc) + '</div>' +
           '<span class="catalog-card-cta">' + pickLang({en:'View Details',id:'Lihat Detail'}) + ' <i class="fa-solid fa-arrow-right"></i></span>' +
@@ -396,7 +417,7 @@ function openCatalogModal(item) {
     '<img class="detail-modal-img" src="' + resolveImage(item.image, CONTENT_CONFIG.catalogImageBase) + '" ' +
       'onerror="this.onerror=null;this.src=\'' + PLACEHOLDER_IMG + '\';" alt="' + pickLang(item.name) + '"/>' +
     '<div class="detail-modal-body">' +
-      '<div class="detail-modal-meta"><span class="detail-modal-tag">' + pickLang(item.category) + '</span></div>' +
+      '<div class="detail-modal-meta"><span class="detail-modal-tag">' + pickLang(item.category) + '</span>' + stockBadge(item.stock) + '</div>' +
       '<h3>' + pickLang(item.name) + '</h3>' +
       '<div class="detail-modal-content"><p>' + pickLang(item.fullDesc) + '</p></div>' +
       (specsHtml ? '<ul class="detail-modal-specs">' + specsHtml + '</ul>' : '') +

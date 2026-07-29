@@ -1579,7 +1579,26 @@ textarea { resize: vertical; min-height: 130px; }
   text-transform: uppercase;
   color: var(--orange);
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
+.stock-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  padding: 0.14rem 0.6rem;
+  border-radius: 20px;
+}
+.stock-badge.stock-in   { background: rgba(34,150,90,0.1);  color: #1f8a4f; }
+.stock-badge.stock-out  { background: rgba(200,60,60,0.1);  color: #c73c3c; }
+.stock-badge.stock-neutral { background: rgba(10,69,139,0.08); color: var(--blue); }
+.stock-badge i { font-size: 0.55rem; }
 .catalog-card-title {
   font-family: 'Poppins', sans-serif;
   font-size: 1.02rem;
