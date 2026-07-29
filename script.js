@@ -64,6 +64,9 @@ function applyLang(l) {
 
   /* Refresh services showcase text if it's on this page */
   if (typeof window.__svcRefreshLang === 'function') window.__svcRefreshLang();
+
+  /* Refresh News/Catalog cards if on those pages */
+  if (typeof window.__contentRefreshLang === 'function') window.__contentRefreshLang();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
