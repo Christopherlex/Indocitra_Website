@@ -1452,8 +1452,10 @@ textarea { resize: vertical; min-height: 130px; }
 .news-card-img {
   width: 100%;
   height: 190px;
-  object-fit: cover;
+  object-fit: contain;
   background: var(--off-white);
+  padding: 0.6rem;
+  box-sizing: border-box;
   display: block;
 }
 .news-card-body {
@@ -1562,8 +1564,10 @@ textarea { resize: vertical; min-height: 130px; }
 .catalog-card-img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   background: var(--off-white);
+  padding: 0.75rem;
+  box-sizing: border-box;
   display: block;
 }
 .catalog-card-body {
@@ -1684,7 +1688,10 @@ textarea { resize: vertical; min-height: 130px; }
 .detail-modal-img {
   width: 100%;
   max-height: 340px;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--off-white);
+  padding: 1rem;
+  box-sizing: border-box;
   display: block;
 }
 .detail-modal-video {
