@@ -959,10 +959,44 @@ textarea { resize: vertical; min-height: 130px; }
 
 /* Whatsapp floating */
 /* ── WhatsApp Floating Button ── */
-.wa-float {
+.wa-wrap {
   position: fixed;
   bottom: 24px;
   right: 24px;
+  z-index: 9998;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  visibility: visible !important;
+}
+
+/* Curved "Contact Us" SVG text above the button */
+.wa-curved-text {
+  width: 90px;
+  height: 48px;
+  margin-bottom: -6px;
+  opacity: 0;
+  animation: waCurvedShow 7s ease-in-out infinite;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.18));
+}
+.wa-curved-text text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  fill: #25d366;
+  letter-spacing: 0.5px;
+}
+
+@keyframes waCurvedShow {
+  0%           { opacity: 0;   transform: translateY(6px) scale(0.85); }
+  8%           { opacity: 1;   transform: translateY(0)   scale(1); }
+  40%          { opacity: 1;   transform: translateY(0)   scale(1); }
+  52%          { opacity: 0;   transform: translateY(-4px) scale(0.9); }
+  100%         { opacity: 0;   transform: translateY(6px) scale(0.85); }
+}
+
+.wa-float {
   width: 56px;
   height: 56px;
   background: #25d366;
@@ -973,15 +1007,12 @@ textarea { resize: vertical; min-height: 130px; }
   color: var(--white);
   font-size: 1.55rem;
   box-shadow: 0 6px 22px rgba(37,211,102,0.5);
-  z-index: 9998;
   text-decoration: none;
-  visibility: visible !important;
-  opacity: 1 !important;
-  /* Subtle bounce to attract attention */
   animation: waBounce 2.8s ease-in-out infinite;
+  position: relative;
 }
 
-/* Ripple ring behind the button */
+/* Ripple ring */
 .wa-float::before {
   content: '';
   position: absolute;
@@ -992,7 +1023,6 @@ textarea { resize: vertical; min-height: 130px; }
   animation: waPulse 2.8s ease-out infinite;
   z-index: -1;
 }
-
 .wa-float:hover {
   animation: none;
   transform: scale(1.12);
@@ -1001,57 +1031,28 @@ textarea { resize: vertical; min-height: 130px; }
 .wa-float:hover::before { animation: none; }
 
 @keyframes waBounce {
-  0%, 100% { transform: translateY(0) scale(1); }
+  0%, 100% { transform: translateY(0)    scale(1); }
   10%       { transform: translateY(-7px) scale(1.05); }
-  20%       { transform: translateY(0) scale(1); }
+  20%       { transform: translateY(0)    scale(1); }
   30%       { transform: translateY(-4px) scale(1.03); }
-  40%       { transform: translateY(0) scale(1); }
-  /* stays still for the rest of the cycle */
+  40%       { transform: translateY(0)    scale(1); }
 }
-
 @keyframes waPulse {
   0%   { transform: scale(1);    opacity: 0.55; }
   70%  { transform: scale(1.65); opacity: 0; }
   100% { transform: scale(1.65); opacity: 0; }
 }
 
-/* Tooltip label that appears on hover */
-.wa-float-label {
-  position: fixed;
-  bottom: 32px;
-  right: 90px;
-  background: rgba(0,0,0,0.75);
-  color: var(--white);
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  padding: 0.35rem 0.85rem;
-  border-radius: 20px;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateX(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  pointer-events: none;
-  z-index: 9997;
-}
-.wa-float:hover ~ .wa-float-label,
-.wa-float-label:hover {
-  opacity: 1;
-  transform: translateX(0);
-}
+/* Tooltip on hover (desktop) */
+.wa-wrap:hover .wa-curved-text { animation: none; opacity: 0; }
 
-/* Mobile — slightly smaller, same position */
+/* Mobile */
 @media (max-width: 768px) {
-  .wa-float {
-    bottom: 20px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
-    font-size: 1.4rem;
-  }
-  .wa-float-label { display: none; }
+  .wa-wrap  { bottom: 20px; right: 20px; }
+  .wa-float { width: 52px; height: 52px; font-size: 1.4rem; }
+  .wa-curved-text { width: 80px; height: 42px; }
+  .wa-curved-text text { font-size: 10px; }
 }
-
 
 /* ══════════════════════════════════════════════
    LANGUAGE TOGGLE BUTTON
