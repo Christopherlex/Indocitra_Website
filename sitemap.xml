@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.indocitratech.com/index.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/index.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.indocitratech.com/about.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.indocitratech.com/services.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/services.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.indocitratech.com/testimonial.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/testimonial.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/testimonial.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.indocitratech.com/news.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/news.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/news.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.indocitratech.com/catalog.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/catalog.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/catalog.html"/>
+  </url>
+
+  <url>
+    <loc>https://www.indocitratech.com/contact.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.indocitratech.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.indocitratech.com/contact.html"/>
+  </url>
+
+</urlset>
