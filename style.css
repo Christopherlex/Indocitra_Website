@@ -251,7 +251,7 @@ footer {
   object-fit: contain;
   margin-bottom: 1rem;
   background: #fff;
-  border-radius: 50%;
+  border-radius: 8px;
   padding: 5px;
 }
 .footer-brand p {
