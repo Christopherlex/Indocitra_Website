@@ -1,0 +1,44 @@
+# Indo Citra Jaya Sentosa
+
+> Industrial solutions provider based in Pasuruan, East Java (Jawa Timur), Indonesia. Core services: industrial automation (PLC, SCADA, control panels) and HVAC (chillers, AHU, FCU, ducting), plus custom machinery, warehouse racking systems, forklift supply and servicing, and industrial parts repair. Operating since 2014; serves 50+ companies across East Java and the rest of Indonesia.
+
+The website is published in two languages with identical content: English at the site root and Bahasa Indonesia under /id/.
+
+## Key facts
+
+- Name: Indo Citra Jaya Sentosa (also written "Indocitra")
+- Location: Pasuruan, Jawa Timur (East Java), Indonesia
+- Founded: 2014 (racking systems); industrial automation since 2020; custom machine manufacturing since 2024
+- Sectors served: manufacturing, food and beverage, power, commercial
+- WhatsApp: +62 812-3546-4274 (Fredy, sales and projects), +62 822-4522-5738 (Hilmy, operations)
+- Email: indocitra.tech@gmail.com
+- Website: https://www.indocitratech.com
+
+## Services
+
+- [Industrial Automation](https://www.indocitratech.com/services.html#automation): PLC programming (Siemens, Omron, Schneider Electric), SCADA design and implementation, safety device installation, control panel fabrication and wiring, industrial IoT and remote monitoring, commissioning.
+- [HVAC Systems](https://www.indocitratech.com/services.html#hvac): system design and load calculation, chiller installation and integration, AHU, FCU and ducting works, chiller overhaul and servicing, refrigeration and cold storage, preventive maintenance.
+- [Custom Machinery](https://www.indocitratech.com/services.html#machinery): custom machine design and fabrication, unscrambler and conveyor systems, automated production line equipment, factory acceptance testing, after-sales support.
+- [Repair Industrial Parts](https://www.indocitratech.com/services.html#repair): compressors, conveyors, pumps, motors and drives, hydraulic and pneumatic systems, electrical panels, contract maintenance.
+- [Racking Systems](https://www.indocitratech.com/services.html#racking): selective, drive-in, heavy-duty pallet and mezzanine racking, warehouse layout design, installation, safety inspection and load testing.
+- [Forklift](https://www.indocitratech.com/services.html#forklift): forklift supply, electric and LPG forklift servicing, maintenance contracts, spare parts.
+
+## Pages (English)
+
+- [Home](https://www.indocitratech.com/): overview and frequently asked questions
+- [About](https://www.indocitratech.com/about.html): company history, mission and vision
+- [Services](https://www.indocitratech.com/services.html): full scope of each service and the project process
+- [Testimonials](https://www.indocitratech.com/testimonial.html): client testimonials and project stories
+- [News](https://www.indocitratech.com/news.html): company news and project updates
+- [Catalog](https://www.indocitratech.com/catalog.html): industrial product catalog
+- [Contact](https://www.indocitratech.com/contact.html): phone, WhatsApp, email and location
+
+## Halaman (Bahasa Indonesia)
+
+- [Beranda](https://www.indocitratech.com/id/): ringkasan dan pertanyaan yang sering diajukan
+- [Tentang Kami](https://www.indocitratech.com/id/about.html)
+- [Layanan](https://www.indocitratech.com/id/services.html): jasa otomasi industri, HVAC, mesin kustom, racking, forklift, perbaikan suku cadang
+- [Testimoni](https://www.indocitratech.com/id/testimonial.html)
+- [Berita](https://www.indocitratech.com/id/news.html)
+- [Katalog](https://www.indocitratech.com/id/catalog.html)
+- [Kontak](https://www.indocitratech.com/id/contact.html)

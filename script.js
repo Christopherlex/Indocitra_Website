@@ -14,15 +14,15 @@ const T = {
   }
 };
 
-let lang = localStorage.getItem('icjs_lang') || 'en';
+/* Language comes from the URL: /id/... pages are Indonesian, everything else English. */
+let lang = /\/id(\/|$)/.test(window.location.pathname) ? 'id' : 'en';
 
 function applyLang(l) {
   lang = l;
-  localStorage.setItem('icjs_lang', l);
 
   /* Toggle button text */
   const btn = document.getElementById('langToggle');
-  if (btn) btn.innerHTML = l === 'en' ? '🌐 ID' : '🌐 EN';
+  if (btn) btn.textContent = l === 'en' ? '🌐 ID' : '🌐 EN';
 
   /* Nav links */
   const navMap = {
@@ -74,10 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* ── Language Toggle ── */
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
-    langBtn.addEventListener('click', function() {
-      applyLang(lang === 'en' ? 'id' : 'en');
-    });
-    /* Apply saved language on page load */
+    /* The toggle is a plain link to the other language version; just sync JS-rendered text. */
     applyLang(lang);
   }
 

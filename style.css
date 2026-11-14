@@ -1922,3 +1922,78 @@ textarea { resize: vertical; min-height: 130px; }
   .detail-modal-body { padding: 1.5rem 1.25rem 1.75rem; }
   .detail-modal-backdrop { padding: 1.5rem 0.75rem; }
 }
+
+/* ══════════════════════════════════════════════
+   FAQ (homepage) — visible so search engines and
+   AI crawlers can read it; mirrored in FAQPage schema
+   ══════════════════════════════════════════════ */
+a.lang-toggle { text-decoration: none; line-height: 1.4; }
+.faq-section { background: var(--off-white); }
+.faq-list { max-width: 860px; margin: 2rem auto 0; display: grid; gap: 0.85rem; }
+.faq-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(10,69,139,0.05);
+  transition: var(--transition);
+}
+.faq-item[open] { border-color: var(--blue); box-shadow: var(--shadow); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--blue);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(230,120,23,0.12);
+  color: var(--orange);
+  font-size: 1.15rem; font-weight: 600; line-height: 1;
+}
+.faq-item[open] summary::after { content: '\2212'; }
+.faq-item .faq-answer { padding: 0 1.4rem 1.25rem; font-size: 0.95rem; line-height: 1.75; }
+@media (max-width: 600px) {
+  .faq-item summary { padding: 0.95rem 1.1rem; font-size: 0.93rem; }
+  .faq-item .faq-answer { padding: 0 1.1rem 1.1rem; }
+}
+
+/* ══════════════════════════════════════════════
+   SERVICES — static scope cards (crawlable copy of
+   what the interactive showcase renders with JS)
+   ══════════════════════════════════════════════ */
+.svc-scope { background: var(--white); }
+.svc-scope-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.svc-scope-item {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.75rem 1.5rem;
+  scroll-margin-top: 100px;
+}
+.svc-scope-head { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.85rem; }
+.svc-scope-icon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  background: var(--blue); color: var(--white); font-size: 1rem;
+}
+.svc-scope-item h3 { font-size: 1.2rem; color: var(--blue); margin: 0; }
+.svc-scope-item p { font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem; }
+.svc-scope-item ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; }
+.svc-scope-item li { position: relative; padding-left: 1.4rem; font-size: 0.9rem; color: var(--text-dark); }
+.svc-scope-item li::before {
+  content: ''; position: absolute; left: 0; top: 0.55em;
+  width: 7px; height: 7px; border-radius: 50%; background: var(--orange);
+}
+@media (max-width: 800px) { .svc-scope-grid { grid-template-columns: 1fr; } }

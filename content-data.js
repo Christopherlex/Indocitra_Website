@@ -16,11 +16,14 @@
    CONFIG — paste your Google Sheet "publish to
    web" CSV links here once ready.
 ───────────────────────────────────────────── */
+/* Pages under /id/ sit one folder deeper, so local images need a ../ prefix. */
+var ASSET_ROOT = /\/id(\/|$)/.test(window.location.pathname) ? '../' : '';
+
 var CONTENT_CONFIG = {
   newsCsvUrl:    'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBYw1MD-mSFZvOHntRdJZS_xJ8BVxQdVW5GiZnRWi9IBc-vHJcT1FyQa2NYR-jf5Qsilz0dV9tMBl_/pub?gid=0&single=true&output=csv',
   catalogCsvUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQsriBx1jrcrym5rvJxgXYZqPYKkUKVC_XyrmnsEMqXTUDCCY9p8Hqn4pbyTK7cltV6SCrgbjC3ZIog/pub?gid=0&single=true&output=csv',
-  newsImageBase:    'images/news/',
-  catalogImageBase: 'images/catalog/'
+  newsImageBase:    ASSET_ROOT + 'images/news/',
+  catalogImageBase: ASSET_ROOT + 'images/catalog/'
 };
 
 /* Inline SVG placeholder shown if an image is missing/broken,
@@ -58,7 +61,7 @@ var SAMPLE_NEWS = [
     title: { en: 'A Decade of Industrial Solutions: Reflecting on 2014–2026', id: 'Satu Dekade Solusi Industri: Refleksi 2014–2026' },
     date: '2026-04-10',
     excerpt: { en: 'From racking systems in 2014 to a full-service industrial solutions provider today — a look back at our journey.', id: 'Dari sistem racking pada 2014 hingga menjadi penyedia solusi industri lengkap hari ini — melihat kembali perjalanan kami.' },
-    caption: { en: 'PT Indo Citra Jaya Sentosa was founded in 2014 with a simple focus: reliable racking systems for warehouses across East Java. Over the past decade, that focus has grown into a full-service industrial solutions provider.\n\nIn 2020, we expanded into industrial automation. In 2024, we launched a dedicated custom machine manufacturing segment. Today, we serve over 50 clients across manufacturing, food and beverage, and energy sectors, with international partnerships extending to Korea.\n\nNone of this would be possible without the trust our clients have placed in us. As we look ahead, we remain committed to the same principle that got us here: built on trust, driven by reliability.', id: 'PT Indo Citra Jaya Sentosa didirikan pada 2014 dengan fokus sederhana: sistem racking yang andal untuk gudang-gudang di Jawa Timur. Selama satu dekade terakhir, fokus tersebut berkembang menjadi penyedia solusi industri yang lengkap.\n\nPada 2020, kami memperluas ke segmen otomasi industri. Pada 2024, kami meluncurkan segmen manufaktur mesin kustom khusus. Hari ini, kami melayani lebih dari 50 klien di sektor manufaktur, makanan dan minuman, serta energi, dengan kemitraan internasional yang meluas hingga Korea.\n\nSemua ini tidak akan mungkin terjadi tanpa kepercayaan yang klien kami berikan. Ke depannya, kami tetap berkomitmen pada prinsip yang sama yang membawa kami sampai di sini: dibangun atas kepercayaan, digerakkan oleh keandalan.' },
+    caption: { en: 'Indo Citra Jaya Sentosa was founded in 2014 with a simple focus: reliable racking systems for warehouses across East Java. Over the past decade, that focus has grown into a full-service industrial solutions provider.\n\nIn 2020, we expanded into industrial automation. In 2024, we launched a dedicated custom machine manufacturing segment. Today, we serve over 50 clients across manufacturing, food and beverage, and energy sectors, with international partnerships extending to Korea.\n\nNone of this would be possible without the trust our clients have placed in us. As we look ahead, we remain committed to the same principle that got us here: built on trust, driven by reliability.', id: 'Indo Citra Jaya Sentosa didirikan pada 2014 dengan fokus sederhana: sistem racking yang andal untuk gudang-gudang di Jawa Timur. Selama satu dekade terakhir, fokus tersebut berkembang menjadi penyedia solusi industri yang lengkap.\n\nPada 2020, kami memperluas ke segmen otomasi industri. Pada 2024, kami meluncurkan segmen manufaktur mesin kustom khusus. Hari ini, kami melayani lebih dari 50 klien di sektor manufaktur, makanan dan minuman, serta energi, dengan kemitraan internasional yang meluas hingga Korea.\n\nSemua ini tidak akan mungkin terjadi tanpa kepercayaan yang klien kami berikan. Ke depannya, kami tetap berkomitmen pada prinsip yang sama yang membawa kami sampai di sini: dibangun atas kepercayaan, digerakkan oleh keandalan.' },
     content: ''
   }
 ];
